@@ -4,8 +4,10 @@ import java.io.Serializable;
 
 import java.util.Date;
 
-
 public class TemperatureInfo implements Serializable {
+
+	public static final long serialVersionUID = 985432132155757L;
+
     private String city;
     private Date date;
     private double min;

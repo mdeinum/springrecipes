@@ -1,59 +1,90 @@
-// Define subprojects section, this will include plugins, repositories and other high-level definitions for all subprojects
-subprojects {
-  // Define plugins
-  apply plugin: 'java'
-  apply plugin: 'maven' 
+configure(allprojects) { project -> 
+	group = 'com.apress.springrecipes'
+	version = '3.0.0-SNAPSHOT'
 
-  // Define optional flags for compilation
-  tasks.withType(Compile) { 
-	  options.compilerArgs << "-Xlint:deprecation" 
-	  options.compilerArgs << "-Xlint:unchecked" 
-  } 
+	ext.springVersion		 		= "4.0.2.RELEASE"
+	ext.springSecurityVersion		= "3.2.2.RELEASE"
+	ext.springDataJpaVersion 		= "1.5.1.RELEASE"
+	ext.springWsVersion				= "2.1.4.RELEASE"
+	ext.springBatchVersion	 		= "3.0.0.M3"
+	ext.springIntegrationVersion	= "4.0.0.M3"
+	ext.slf4jVersion         		= "1.7.6"
+	ext.logbackVersion		 		= "1.1.1"
+	ext.aspectjVersion       		= "1.7.4"
+	ext.activemqVersion				= "5.7.0"
+	ext.groovyVersion        		= "2.2.2"
+	ext.hibernate4Version    		= "4.3.3.Final"
+	ext.hibValVersion        		= "4.3.1.Final"
+	ext.hsqldbVersion        		= "2.3.1"
+	ext.jackson2Version      		= "2.3.1"
+	ext.jodaVersion          		= "2.3"
+	ext.junitVersion         		= "4.11"
 
-  // Define group and version
-  group = 'com.apress.springrecipes'
-  version = '1.0-SNAPSHOT'
+	apply plugin: 'java'
+	
+	compileJava.options*.compilerArgs = [
+		"-Xlint:serial", "-Xlint:varargs", "-Xlint:cast", "-Xlint:classfile",
+		"-Xlint:dep-ann", "-Xlint:divzero", "-Xlint:empty", "-Xlint:finally",
+		"-Xlint:overrides", "-Xlint:path", "-Xlint:processing", "-Xlint:static",
+		"-Xlint:try", "-Xlint:fallthrough", "-Xlint:rawtypes", "-Xlint:deprecation",
+		"-Xlint:unchecked", "-Xlint:-options"
+	]
+
+	compileTestJava.options*.compilerArgs = [
+		"-Xlint:serial", "-Xlint:varargs", "-Xlint:cast", "-Xlint:classfile",
+		"-Xlint:dep-ann", "-Xlint:divzero", "-Xlint:empty", "-Xlint:finally",
+		"-Xlint:overrides", "-Xlint:path", "-Xlint:processing", "-Xlint:static",
+		"-Xlint:try", "-Xlint:-fallthrough", "-Xlint:-rawtypes", "-Xlint:-deprecation",
+		"-Xlint:-unchecked", "-Xlint:-options"]
+
+	compileJava {
+		sourceCompatibility=1.7
+		targetCompatibility=1.7
+	}
+
+	compileTestJava {
+		sourceCompatibility=1.7
+		targetCompatibility=1.7
+	}
+	
+	// Define repositorie to get dependencies
+	repositories {
+		mavenCentral()
+		// Public Spring artifacts
+		maven { url "http://repo.spring.io/release" }
+		maven { url="http://repo.spring.io/milestone" }
+		maven { url="http://repo.spring.io/snapshot" }
+	}
   
-  description = """Spring Recipes Root"""
+	configurations {
+		// We want to use SLF4J for logging, ban commons-logging
+		all*.exclude group: 'commons-logging', module: 'commons-logging'
+	
+		provided
+	}
+  
+	dependencies {
+		compile("org.slf4j:slf4j-api:${slf4jVersion}")
+		compile("org.slf4j:jcl-over-slf4j:${slf4jVersion}")
+		compile("ch.qos.logback:logback-classic:${logbackVersion}")
+		//
+		provided group:'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+		// Add dependencies for testing (these will only be used for the testing phase)
+		testCompile("junit:junit:${junitVersion}")
+		testCompile("org.hamcrest:hamcrest-all:1.3")
+		testCompile("org.mockito:mockito-core:1.9.5")
+		testCompile("org.springframework:spring-test:$springVersion")
+	}
+	
+	//Include provided for compilation
+	sourceSets.main.compileClasspath += configurations.provided
+	
+	task copyDependenciesToLibDir( type: Copy ) {
+		into "$buildDir/libs/lib"
+		from configurations.runtime
+	}
+}
 
-  sourceCompatibility = 1.6
-  targetCompatibility = 1.6
-
-  // Define repositorie to get dependencies
-  repositories {
-    mavenCentral()
-    mavenRepo name: "ext-snapshots", url: "http://springframework.svn.sourceforge.net/svnroot/springframework/repos/repo-ext/"
-    mavenRepo name: "maven1", url: "http://repo1.maven.org/maven2"
-    // Public Spring artifacts
-    mavenRepo name: "springsource-org-release", url: "http://repository.springsource.com/maven/bundles/release"
-    mavenRepo name: "springsource-org-external", url: "http://repository.springsource.com/maven/bundles/external"
-    mavenRepo name: "spring-release", url: "http://maven.springframework.org/release"
-    mavenRepo name: "spring-milestone", url: "http://maven.springframework.org/milestone"
-    mavenRepo name: "spring-snapshot", url: "http://maven.springframework.org/snapshot"
-  }
-
-  /* Define task to copy dependencies to into lib directory inside libs build dir 
-    .jar/.war files are placed inside libs, so this comes in handy for command-line exection */
-  task copyDependenciesToLibDir( type: Copy ) {
-    into "$buildDir/libs/lib"
-    from configurations.runtime
-  }
- 
-  /* Provided is used to define compile-time dependencies, this allows such dependencies to not be copied into build files (.wars)
-     this is awkard behavior, but it appears it's the wat its done in Grad
-     Source: http://stackoverflow.com/questions/10405970/how-do-i-define-a-compile-time-only-classpath-in-gradle */
-  configurations{
-     provided
-  }
-
-  // Define 'provided' dependencies that will be loaded only for the compile classpath 
-  dependencies{
-    provided group:'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
-    provided group: 'commons-lang', name: 'commons-lang', version:'2.2'
-    provided group: 'commons-io', name: 'commons-io', version:'1.3'
-  }
-
-  //Include provided for compilation
-  sourceSets.main.compileClasspath += configurations.provided
-
-} // End subprojects section 
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}

@@ -4,11 +4,10 @@ project(':Ch3:Recipe_3_1_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -33,11 +32,10 @@ project(':Ch3:Recipe_3_1_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -62,11 +60,10 @@ project(':Ch3:Recipe_3_1_iii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -92,11 +89,10 @@ project(':Ch3:Recipe_3_2') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -121,11 +117,10 @@ project(':Ch3:Recipe_3_3_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -151,11 +146,10 @@ project(':Ch3:Recipe_3_3_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -181,11 +175,10 @@ project(':Ch3:Recipe_3_3_iii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -211,11 +204,10 @@ project(':Ch3:Recipe_3_3_iv') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -241,11 +233,10 @@ project(':Ch3:Recipe_3_3_v') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -271,11 +262,10 @@ project(':Ch3:Recipe_3_3_vi') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -300,11 +290,10 @@ project(':Ch3:Recipe_3_3_vii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -329,11 +318,10 @@ project(':Ch3:Recipe_3_4_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -359,11 +347,10 @@ project(':Ch3:Recipe_3_4_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'javax.inject', name: 'javax.inject', version:'1'
    }
    // Define how to build final JAR for project
@@ -389,11 +376,10 @@ project(':Ch3:Recipe_3_5_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -418,11 +404,10 @@ project(':Ch3:Recipe_3_5_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -448,11 +433,10 @@ project(':Ch3:Recipe_3_6_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -478,11 +462,10 @@ project(':Ch3:Recipe_3_6_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -508,11 +491,10 @@ project(':Ch3:Recipe_3_7') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -538,11 +520,10 @@ project(':Ch3:Recipe_3_8_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -568,11 +549,10 @@ project(':Ch3:Recipe_3_8_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -597,11 +577,10 @@ project(':Ch3:Recipe_3_8_iii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -626,11 +605,10 @@ project(':Ch3:Recipe_3_8_iv') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -655,11 +633,10 @@ project(':Ch3:Recipe_3_9_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -685,11 +662,10 @@ project(':Ch3:Recipe_3_9_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -715,11 +691,10 @@ project(':Ch3:Recipe_3_9_iii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -745,11 +720,10 @@ project(':Ch3:Recipe_3_9_iv') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -775,11 +749,10 @@ project(':Ch3:Recipe_3_10_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -805,11 +778,10 @@ project(':Ch3:Recipe_3_10_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -835,11 +807,10 @@ project(':Ch3:Recipe_3_10_iii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -865,11 +836,10 @@ project(':Ch3:Recipe_3_11') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -895,15 +865,13 @@ project(':Ch3:Recipe_3_12_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'
             
    }
    // Define how to build final JAR for project
@@ -929,15 +897,13 @@ project(':Ch3:Recipe_3_12_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'
             
    }
    // Define how to build final JAR for project
@@ -963,15 +929,13 @@ project(':Ch3:Recipe_3_12_iii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'
             
    }
    // Define how to build final JAR for project
@@ -997,15 +961,13 @@ project(':Ch3:Recipe_3_12_iv') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'
             
    }
    // Define how to build final JAR for project
@@ -1032,15 +994,13 @@ project(':Ch3:Recipe_3_12_v') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'
             
    }
    // Define how to build final JAR for project
@@ -1067,15 +1027,13 @@ project(':Ch3:Recipe_3_13') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'
             
    }
    // Define how to build final JAR for project
@@ -1102,15 +1060,13 @@ project(':Ch3:Recipe_3_14_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'
             
    }
    // Define how to build final JAR for project
@@ -1136,15 +1092,13 @@ project(':Ch3:Recipe_3_14_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'
             
    }
    // Define how to build final JAR for project
@@ -1171,15 +1125,13 @@ project(':Ch3:Recipe_3_15_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'            
    }
    // Define how to build final JAR for project
    jar {
@@ -1205,15 +1157,13 @@ project(':Ch3:Recipe_3_15_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'
    }
    // Define how to build final JAR for project
    jar {
@@ -1238,15 +1188,13 @@ project(':Ch3:Recipe_3_16_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'            
    }
    // Define how to build final JAR for project
    jar {
@@ -1272,15 +1220,13 @@ project(':Ch3:Recipe_3_16_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'            
    }
    // Define how to build final JAR for project
    jar {
@@ -1306,15 +1252,13 @@ project(':Ch3:Recipe_3_16_iii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'            
    }
    // Define how to build final JAR for project
    jar {
@@ -1340,15 +1284,13 @@ project(':Ch3:Recipe_3_16_iv') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'            
    }
    // Define how to build final JAR for project
    jar {
@@ -1374,15 +1316,13 @@ project(':Ch3:Recipe_3_17') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'            
    }
    // Define how to build final JAR for project
    jar {
@@ -1407,15 +1347,13 @@ project(':Ch3:Recipe_3_18') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'            
    }
    // Define how to build final JAR for project
    jar {
@@ -1441,15 +1379,13 @@ project(':Ch3:Recipe_3_19_i') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'            
    }
    // Define how to build final JAR for project
    jar {
@@ -1475,16 +1411,14 @@ project(':Ch3:Recipe_3_19_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
-    compile group: 'org.aspectj', name: 'aspectjweaver',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+    compile group: 'org.aspectj', name: 'aspectjweaver',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'                       
 
    }
    // Define how to build final JAR for project
@@ -1511,17 +1445,15 @@ project(':Ch3:Recipe_3_19_iii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
-    compile group: 'org.aspectj', name: 'aspectjweaver',version:'1.7.2'
-    compile group: 'org.springframework', name: 'spring-instrument',version:'3.2.0.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+    compile group: 'org.aspectj', name: 'aspectjweaver',version:"$aspectjVersion"
+    compile group: 'org.springframework', name: 'spring-instrument',version:"$springVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'                       
 
    }
    // Define how to build final JAR for project
@@ -1547,16 +1479,14 @@ project(':Ch3:Recipe_3_20') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
-    compile group: 'org.aspectj', name: 'aspectjweaver',version:'1.7.2'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+    compile group: 'org.aspectj', name: 'aspectjweaver',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'                       
 
    }
    // Define how to build final JAR for project
@@ -1583,18 +1513,16 @@ project(':Ch3:Recipe_3_21') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aop', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-aspects', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
-    compile group: 'org.aspectj', name: 'aspectjtools',version:'1.7.2'
-    compile group: 'org.aspectj', name: 'aspectjweaver',version:'1.7.2'
-    compile group: 'org.springframework', name: 'spring-instrument',version:'3.2.0.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-aspects', version:"$springVersion"
+    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+    compile group: 'org.aspectj', name: 'aspectjweaver',version:"$aspectjVersion"
+    compile group: 'org.springframework', name: 'spring-instrument',version:"$springVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-    compile group: 'log4j', name: 'log4j', version:'1.2.14'                       
 
    }
    // Define how to build final JAR for project
@@ -1647,11 +1575,10 @@ project(':Ch3:Recipe_3_22_ii') {
   defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-expression', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-beans', version:'3.2.0.RELEASE'
-    compile group: 'org.springframework', name: 'spring-context', version:'3.2.0.RELEASE'
-    compile group: 'commons-logging', name: 'commons-logging', version:'1.1.1'
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'commons-lang', name: 'commons-lang', version:'2.6'
    }
    // Define how to build final JAR for project
