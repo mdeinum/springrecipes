@@ -15,7 +15,7 @@ public class ShopConfiguration {
         @Bean
 	public ProductCreator productCreatorFactoryBean() {
 	    ProductCreator factory = new ProductCreator();
-	    Map<String, Product> products = new HashMap();
+	    Map<String, Product> products = new HashMap<String, Product>();
 	    products.put("aaa", new Battery("AAA", 2.5)); 
 	    products.put("cdrw", new Disc("CD-RW", 1.5)); 
 	    products.put("dvdrw", new Disc("DVD-RW", 3.0));
@@ -25,7 +25,7 @@ public class ShopConfiguration {
 
         @Bean
         public ProductCreator productCreatorFactory() {
-	    return (ProductCreator) productCreatorFactoryBean();
+	    return productCreatorFactoryBean();
 	}
            
         @Bean           

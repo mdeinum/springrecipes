@@ -28,7 +28,7 @@ public class SequenceGenerator {
         StringBuffer buffer = new StringBuffer();
         buffer.append(prefix);
         buffer.append(initial + counter++);
-        for (Map.Entry entry : suffixes.entrySet()) {
+        for (Map.Entry<Object, Object> entry : suffixes.entrySet()) {
             buffer.append("-");
             buffer.append(entry.getKey());
             buffer.append("@");
