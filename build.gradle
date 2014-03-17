@@ -21,6 +21,8 @@ configure(allprojects) { project ->
 	ext.junitVersion         		= "4.11"
 
 	apply plugin: 'java'
+	apply plugin: 'idea'
+	apply plugin: 'eclipse'
 	
 	compileJava.options*.compilerArgs = [
 		"-Xlint:serial", "-Xlint:varargs", "-Xlint:cast", "-Xlint:classfile",

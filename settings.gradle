@@ -10,6 +10,7 @@ include 'Ch4:springweb'
 
 include 'Ch5:Recipe_5_1'
 
+include 'Ch11:Recipe_11_1_i'
 
 include 'Ch12:Recipe_12_1_i','Ch12:Recipe_12_1_ii'
 
