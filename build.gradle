@@ -86,6 +86,13 @@ configure(allprojects) { project ->
 		into "$buildDir/libs/lib"
 		from configurations.runtime
 	}
+
+    jar {
+        // Copy jar dependencies and add to Class-Path.
+        dependsOn copyDependenciesToLibDir
+        def deps = fileTree(dir: "$buildDir/libs/lib", include: '*.jar');
+        manifest.attributes("Class-Path": deps.files.collect {'lib/'+it.name}.join(' '))
+    }
 }
 
 task wrapper(type: Wrapper) {

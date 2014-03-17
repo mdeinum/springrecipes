@@ -11,17 +11,6 @@ project(':Ch1:springintro') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.hello.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End springintro project 

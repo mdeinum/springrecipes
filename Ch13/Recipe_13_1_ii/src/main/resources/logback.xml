@@ -10,6 +10,7 @@
     </appender>
 
     <logger name="com.apress" level="DEBUG" />
+    <logger name="org.springframework.batch" level="DEBUG" />
 
     <root level="INFO">
         <appender-ref ref="CONSOLE" />
