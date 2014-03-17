@@ -53,9 +53,9 @@ configure(allprojects) { project ->
 	repositories {
 		mavenCentral()
 		// Public Spring artifacts
-		maven { url "http://repo.spring.io/release" }
 		maven { url="http://repo.spring.io/milestone" }
 		maven { url="http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/release" }
 	}
   
 	configurations {
@@ -69,6 +69,7 @@ configure(allprojects) { project ->
 		compile("org.slf4j:slf4j-api:${slf4jVersion}")
 		compile("org.slf4j:jcl-over-slf4j:${slf4jVersion}")
 		compile("ch.qos.logback:logback-classic:${logbackVersion}")
+        compile('org.apache.commons:commons-lang3:3.3')
 		//
 		provided group:'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
 		// Add dependencies for testing (these will only be used for the testing phase)
