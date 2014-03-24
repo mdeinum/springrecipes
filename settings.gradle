@@ -15,7 +15,11 @@ include 'Ch11:Recipe_11_0_i','Ch11:Recipe_11_0_ii','Ch11:Recipe_11_0_iii','Ch11:
         'Ch11:Recipe_11_4_i','Ch11:Recipe_11_4_ii','Ch11:Recipe_11_4_iii','Ch11:Recipe_11_4_iv',\
         'Ch11:Recipe_11_5_i','Ch11:Recipe_11_5_ii','Ch11:Recipe_11_5_iii',\
         'Ch11:Recipe_11_6_i','Ch11:Recipe_11_6_ii','Ch11:Recipe_11_6_iii','Ch11:Recipe_11_6_iv',\
-        'Ch11:Recipe_11_7_i','Ch11:Recipe_11_7_ii','Ch11:Recipe_11_7_iii','Ch11:Recipe_11_7_iv','Ch11:Recipe_11_7_v','Ch11:Recipe_11_7_vi'
+        'Ch11:Recipe_11_7_i','Ch11:Recipe_11_7_ii','Ch11:Recipe_11_7_iii','Ch11:Recipe_11_7_iv','Ch11:Recipe_11_7_v','Ch11:Recipe_11_7_vi',\
+        'Ch11:Recipe_11_8_i','Ch11:Recipe_11_8_ii',\
+        'Ch11:Recipe_11_9_i','Ch11:Recipe_11_9_ii','Ch11:Recipe_11_9_iii'
+
+
 
 include 'Ch12:Recipe_12_1_i','Ch12:Recipe_12_1_ii'
 
