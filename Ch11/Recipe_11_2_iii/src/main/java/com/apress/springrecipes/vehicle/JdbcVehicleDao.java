@@ -48,8 +48,7 @@ public class JdbcVehicleDao implements VehicleDao {
     public Vehicle findByVehicleNo(String vehicleNo) {
         String sql = "SELECT * FROM VEHICLE WHERE VEHICLE_NO = ?";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(this.dataSource);
-        Vehicle vehicle = jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Vehicle.class), vehicleNo);
-        return vehicle;
+        return jdbcTemplate.queryForObject(sql, BeanPropertyRowMapper.newInstance(Vehicle.class), vehicleNo);
     }
 
     public void update(Vehicle vehicle) {
