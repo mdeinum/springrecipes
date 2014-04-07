@@ -2,21 +2,21 @@ configure(allprojects) { project ->
 	group = 'com.apress.springrecipes'
 	version = '3.0.0-SNAPSHOT'
 
-	ext.springVersion		 		= "4.0.2.RELEASE"
-	ext.springSecurityVersion		= "3.2.2.RELEASE"
+	ext.springVersion		 		= "4.0.3.RELEASE"
+	ext.springSecurityVersion		= "3.2.3.RELEASE"
 	ext.springDataJpaVersion 		= "1.5.1.RELEASE"
 	ext.springWsVersion				= "2.1.4.RELEASE"
 	ext.springBatchVersion	 		= "3.0.0.M3"
-	ext.springIntegrationVersion	= "4.0.0.M3"
-	ext.slf4jVersion         		= "1.7.6"
-	ext.logbackVersion		 		= "1.1.1"
+	ext.springIntegrationVersion	= "4.0.0.M4"
+	ext.slf4jVersion         		= "1.7.7"
+	ext.logbackVersion		 		= "1.1.2"
 	ext.aspectjVersion       		= "1.7.4"
 	ext.activemqVersion				= "5.7.0"
 	ext.groovyVersion        		= "2.2.2"
-	ext.hibernate4Version    		= "4.3.4.Final"
+	ext.hibernate4Version    		= "4.3.5.Final"
 	ext.hibValVersion        		= "4.3.1.Final"
 	ext.hsqldbVersion        		= "2.3.1"
-	ext.jackson2Version      		= "2.3.1"
+	ext.jackson2Version      		= "2.3.2"
 	ext.jodaVersion          		= "2.3"
 	ext.junitVersion         		= "4.11"
 
