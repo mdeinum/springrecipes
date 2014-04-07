@@ -9,7 +9,7 @@ project(':Ch16:Recipe_16_1_i_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all', version:'5.7.0'
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -40,7 +40,7 @@ project(':Ch16:Recipe_16_1_i_BackOffice') {
     compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -74,7 +74,7 @@ project(':Ch16:Recipe_16_1_ii_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -107,7 +107,7 @@ project(':Ch16:Recipe_16_1_ii_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -140,7 +140,7 @@ project(':Ch16:Recipe_16_1_iii_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -173,7 +173,7 @@ project(':Ch16:Recipe_16_1_iii_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -206,7 +206,7 @@ project(':Ch16:Recipe_16_1_iv_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -239,7 +239,7 @@ project(':Ch16:Recipe_16_1_iv_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -271,7 +271,7 @@ project(':Ch16:Recipe_16_2_i_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -304,7 +304,7 @@ project(':Ch16:Recipe_16_2_i_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -337,7 +337,7 @@ project(':Ch16:Recipe_16_2_ii_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -370,7 +370,7 @@ project(':Ch16:Recipe_16_2_ii_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -403,7 +403,7 @@ project(':Ch16:Recipe_16_3_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
     compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
    }
@@ -439,7 +439,7 @@ project(':Ch16:Recipe_16_3_BackOffice') {
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
     compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
    }
@@ -474,7 +474,7 @@ project(':Ch16:Recipe_16_4_i_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -507,7 +507,7 @@ project(':Ch16:Recipe_16_4_i_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -539,7 +539,7 @@ project(':Ch16:Recipe_16_4_ii_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -572,7 +572,7 @@ project(':Ch16:Recipe_16_4_ii_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -604,7 +604,7 @@ project(':Ch16:Recipe_16_4_iii_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -637,7 +637,7 @@ project(':Ch16:Recipe_16_4_iii_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -669,7 +669,7 @@ project(':Ch16:Recipe_16_4_iv_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -702,7 +702,7 @@ project(':Ch16:Recipe_16_4_iv_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -734,7 +734,7 @@ project(':Ch16:Recipe_16_4_v_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -767,7 +767,7 @@ project(':Ch16:Recipe_16_4_v_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -800,7 +800,7 @@ project(':Ch16:Recipe_16_5_FrontDesk') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
    }
    // Define how to build final JAR for project
    jar {
@@ -833,9 +833,8 @@ project(':Ch16:Recipe_16_5_BackOffice') {
     compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
     compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-    compile group: 'org.apache.activemq', name: 'activemq-all',version:"$activemqVersion"
+    compile group: 'org.apache.activemq', name: 'activemq-core',version:"$activemqVersion"
     compile group: 'org.apache.activemq', name: 'activemq-pool',version:"$activemqVersion"
-    compile group: 'commons-pool', name: 'commons-pool', version:'1.6'
 
    }
    // Define how to build final JAR for project
