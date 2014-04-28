@@ -32,8 +32,13 @@
             channel="inboundHelloJMSMessageChannel"
             extract-payload="true"
             connection-factory="connectionFactory"
-            destination-name="solution011"/>
+            destination-name="solution012"/>
 
     <service-activator input-channel="inboundHelloJMSMessageChannel" ref="inboundHelloWorldJMSPingServiceActivator"/>
+
+
+    <beans:bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <beans:property name="connectionFactory" ref="connectionFactory"/>
+    </beans:bean>
 
 </beans:beans>

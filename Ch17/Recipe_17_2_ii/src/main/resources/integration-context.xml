@@ -30,10 +30,15 @@
 
     <jms:message-driven-channel-adapter
             channel="inboundHelloJMSMessageChannel"
-            extract-payload="true"
+            extract-payload="false"
             connection-factory="connectionFactory"
-            destination-name="solution011"/>
+            destination-name="solution012" />
 
-    <service-activator input-channel="inboundHelloJMSMessageChannel" ref="inboundHelloWorldJMSPingServiceActivator"/>
+    <service-activator input-channel="inboundHelloJMSMessageChannel" ref="inboundHelloWorldJMSPingServiceActivator" />
+
+
+    <beans:bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <beans:property name="connectionFactory" ref="connectionFactory"/>
+    </beans:bean>
 
 </beans:beans>

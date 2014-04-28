@@ -46,7 +46,7 @@ include 'Ch3:Recipe_3_1_i','Ch3:Recipe_3_1_ii','Ch3:Recipe_3_1_iii',\
         'Ch3:Recipe_3_21',\
         'Ch3:Recipe_3_22_i','Ch3:Recipe_3_22_ii'
 
-include 'Ch4:springweb'
+include 'Ch4:Recipe_4_1_i'
 
 include 'Ch5:Recipe_5_1'
 
@@ -81,4 +81,11 @@ include 'Ch16:Recipe_16_1_i_FrontDesk','Ch16:Recipe_16_1_i_BackOffice','Ch16:Rec
 include 'Ch17:Recipe_17_2_i','Ch17:Recipe_17_2_ii',\
         'Ch17:Recipe_17_3_i','Ch17:Recipe_17_3_ii','Ch17:Recipe_17_3_iii',\
         'Ch17:Recipe_17_4_i',\
-        'Ch17:Recipe_17_5_i','Ch17:Recipe_17_5_ii'
+        'Ch17:Recipe_17_5_i','Ch17:Recipe_17_5_ii',\
+        'Ch17:Recipe_17_6_i','Ch17:Recipe_17_6_ii','Ch17:Recipe_17_6_iii',
+        'Ch17:Recipe_17_7_i','Ch17:Recipe_17_7_ii',
+        'Ch17:Recipe_17_9',
+        'Ch17:Recipe_17_10_i','Ch17:Recipe_17_10_ii'
+
+include 'Recipe_4_1_i'
+

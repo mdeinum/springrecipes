@@ -125,3 +125,134 @@ project(':Ch17:Recipe_17_5_ii') {
         compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
     }
 } // End
+
+// Define project
+project(':Ch17:Recipe_17_6_i') {
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-jms', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+
+        // No activemq-all as that includes dependencies we don't want
+        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+    }
+} // End
+
+// Define project
+project(':Ch17:Recipe_17_6_ii') {
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-jms', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+
+        // No activemq-all as that includes dependencies we don't want
+        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+    }
+} // End
+
+// Define project
+project(':Ch17:Recipe_17_6_iii') {
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-jms', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+
+        // No activemq-all as that includes dependencies we don't want
+        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+    }
+} // End
+
+// Define project
+project(':Ch17:Recipe_17_7_i') {
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+        compile group: 'commons-io', name: 'commons-io', version: "2.4"
+    }
+} // End
+
+// Define project
+project(':Ch17:Recipe_17_7_i') {
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+        compile group: 'commons-io', name: 'commons-io', version: "2.4"
+    }
+} // End
+
+// Define project
+project(':Ch17:Recipe_17_7_ii') {
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+        compile group: 'commons-io', name: 'commons-io', version: "2.4"
+    }
+} // End
+
+// Define project
+project(':Ch17:Recipe_17_9') {
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-core', version: "$springIntegrationVersion"
+
+        // IRC Client
+        compile group: 'org.pircbotx', name: 'pircbotx', version: '2.0.1'
+
+    }
+} // End
+
+// Define project
+project(':Ch17:Recipe_17_10_i') {
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-core', version: "$springIntegrationVersion"
+
+    }
+} // End
+
+// Define project
+project(':Ch17:Recipe_17_10_ii') {
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+
+        // No activemq-all as that includes dependencies we don't want
+        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+    }
+} // End
