@@ -46,7 +46,7 @@ include 'Ch3:Recipe_3_1_i','Ch3:Recipe_3_1_ii','Ch3:Recipe_3_1_iii',\
         'Ch3:Recipe_3_21',\
         'Ch3:Recipe_3_22_i','Ch3:Recipe_3_22_ii'
 
-include 'Ch4:Recipe_4_1_i'
+include 'Ch4:Recipe_4_1_i','Ch4:Recipe_4_1_ii','Ch4:Recipe_4_1_iii'
 
 include 'Ch5:Recipe_5_1'
 
@@ -86,6 +86,4 @@ include 'Ch17:Recipe_17_2_i','Ch17:Recipe_17_2_ii',\
         'Ch17:Recipe_17_7_i','Ch17:Recipe_17_7_ii',
         'Ch17:Recipe_17_9',
         'Ch17:Recipe_17_10_i','Ch17:Recipe_17_10_ii'
-
-include 'Recipe_4_1_i'
 
