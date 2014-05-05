@@ -2,12 +2,12 @@ configure(allprojects) { project ->
 	group = 'com.apress.springrecipes'
 	version = '3.0.0-SNAPSHOT'
 
-	ext.springVersion		 		= "4.0.3.RELEASE"
+	ext.springVersion		 		= "4.0.4.RELEASE"
 	ext.springSecurityVersion		= "3.2.3.RELEASE"
 	ext.springDataJpaVersion 		= "1.5.1.RELEASE"
 	ext.springWsVersion				= "2.1.4.RELEASE"
 	ext.springBatchVersion	 		= "3.0.0.M3"
-	ext.springIntegrationVersion	= "4.0.0.M4"
+	ext.springIntegrationVersion	= "4.0.0.RELEASE"
 	ext.slf4jVersion         		= "1.7.7"
 	ext.logbackVersion		 		= "1.1.2"
 	ext.aspectjVersion       		= "1.7.4"

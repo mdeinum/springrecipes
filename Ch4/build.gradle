@@ -58,3 +58,155 @@ dependencies {
 war { archiveName='court.war' }
 } // End springweb
 
+// Define springweb project
+project(':Ch4:Recipe_4_2_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+// Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+// Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        // Add dependencies to add for runtime (these will be included in the WAR, in addition to those in compile group)
+        runtime group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch4:Recipe_4_2_ii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+// Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+// Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        // Add dependencies to add for runtime (these will be included in the WAR, in addition to those in compile group)
+        runtime group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch4:Recipe_4_2_iii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+// Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+// Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        // Add dependencies to add for runtime (these will be included in the WAR, in addition to those in compile group)
+        runtime group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch4:Recipe_4_3_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+// Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+// Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        // Add dependencies to add for runtime (these will be included in the WAR, in addition to those in compile group)
+        runtime group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch4:Recipe_4_3_ii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+// Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+// Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        // Add dependencies to add for runtime (these will be included in the WAR, in addition to those in compile group)
+        runtime group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch4:Recipe_4_3_iii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+// Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+// Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        // Add dependencies to add for runtime (these will be included in the WAR, in addition to those in compile group)
+        runtime group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch4:Recipe_4_4_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+// Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+// Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        // Add dependencies to add for runtime (these will be included in the WAR, in addition to those in compile group)
+        runtime group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+
+// Define springweb project
+project(':Ch4:Recipe_4_5_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+// Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+// Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        // Add dependencies to add for runtime (these will be included in the WAR, in addition to those in compile group)
+        runtime group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
