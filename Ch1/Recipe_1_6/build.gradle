@@ -9,6 +9,14 @@ apply plugin: 'idea'
 
 ext.springVersion='4.0.4.RELEASE'
 
+
+// Define repositorie to get dependencies
+repositories {
+    mavenCentral()
+    // Public Spring artifacts
+    maven { url "http://repo.spring.io/release" }
+}
+
 dependencies {
     compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
 }
