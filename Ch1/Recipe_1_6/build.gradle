@@ -1,0 +1,22 @@
+group = 'com.apress.springrecipes'
+version = '3.0.0-SNAPSHOT'
+
+defaultTasks 'clean', 'build'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+ext.springVersion='4.0.4.RELEASE'
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+}
+
+jar {
+    manifest.attributes("Main-Class": "com.apress.springrecipes.hello.Main")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
