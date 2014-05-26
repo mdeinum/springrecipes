@@ -1,32 +1,23 @@
 package com.apress.springrecipes.replicator;
 
-import java.lang.management.ManagementFactory;
-
-import java.io.IOException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import javax.management.Descriptor;
 import javax.management.JMException;
 import javax.management.MBeanServer;
 import javax.management.ObjectName;
-import javax.management.modelmbean.DescriptorSupport;
-import javax.management.modelmbean.InvalidTargetObjectTypeException;
-import javax.management.modelmbean.ModelMBeanAttributeInfo;
-import javax.management.modelmbean.ModelMBeanInfo;
-import javax.management.modelmbean.ModelMBeanInfoSupport;
-import javax.management.modelmbean.ModelMBeanOperationInfo;
-import javax.management.modelmbean.RequiredModelMBean;
-
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
+import javax.management.modelmbean.*;
+import java.io.IOException;
+import java.lang.management.ManagementFactory;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         ApplicationContext context =
-            new GenericXmlApplicationContext("beans-jmx.xml");
+                new AnnotationConfigApplicationContext("com.apress.springrecipes.replicator.config");
 
-        FileReplicator documentReplicator =
-            (FileReplicator) context.getBean("documentReplicator");
+        FileReplicator documentReplicator = context.getBean(FileReplicator.class);
 
         try {
             MBeanServer mbeanServer = ManagementFactory.getPlatformMBeanServer();
@@ -35,16 +26,16 @@ public class Main {
             RequiredModelMBean mbean = new RequiredModelMBean();
             mbean.setManagedResource(documentReplicator, "objectReference");
 
-            Descriptor srcDirDescriptor = new DescriptorSupport(new String[] {
+            Descriptor srcDirDescriptor = new DescriptorSupport(new String[]{
                     "name=SrcDir", "descriptorType=attribute",
-                    "getMethod=getSrcDir", "setMethod=setSrcDir" });
+                    "getMethod=getSrcDir", "setMethod=setSrcDir"});
             ModelMBeanAttributeInfo srcDirInfo = new ModelMBeanAttributeInfo(
                     "SrcDir", "java.lang.String", "Source directory",
                     true, true, false, srcDirDescriptor);
 
-            Descriptor destDirDescriptor = new DescriptorSupport(new String[] {
+            Descriptor destDirDescriptor = new DescriptorSupport(new String[]{
                     "name=DestDir", "descriptorType=attribute",
-                    "getMethod=getDestDir", "setMethod=setDestDir" });
+                    "getMethod=getDestDir", "setMethod=setDestDir"});
             ModelMBeanAttributeInfo destDirInfo = new ModelMBeanAttributeInfo(
                     "DestDir", "java.lang.String", "Destination directory",
                     true, true, false, destDirDescriptor);
@@ -67,20 +58,21 @@ public class Main {
 
             ModelMBeanInfo mbeanInfo = new ModelMBeanInfoSupport(
                     "FileReplicator", "File replicator",
-                    new ModelMBeanAttributeInfo[] { srcDirInfo, destDirInfo },
+                    new ModelMBeanAttributeInfo[]{srcDirInfo, destDirInfo},
                     null,
-                    new ModelMBeanOperationInfo[] { getSrcDirInfo, setSrcDirInfo,
-                            getDestDirInfo, setDestDirInfo, replicateInfo },
-                    null);
+                    new ModelMBeanOperationInfo[]{getSrcDirInfo, setSrcDirInfo,
+                            getDestDirInfo, setDestDirInfo, replicateInfo},
+                    null
+            );
             mbean.setModelMBeanInfo(mbeanInfo);
 
             mbeanServer.registerMBean(mbean, objectName);
         } catch (JMException e) {
             System.err.println(e);
         } catch (InvalidTargetObjectTypeException e) {
-	    System.err.println(e);
+            System.err.println(e);
         } catch (NoSuchMethodException e) {
-	    System.err.println(e);
+            System.err.println(e);
         }
 
         System.in.read();

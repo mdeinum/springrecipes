@@ -1,16 +1,13 @@
 package com.apress.springrecipes.replicator;
 
-import java.io.IOException;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
+import java.io.IOException;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        ApplicationContext context =
-            new GenericXmlApplicationContext("beans-jmx.xml");
+        new AnnotationConfigApplicationContext("com.apress.springrecipes.replicator.config");
         System.in.read();
-
     }
 }

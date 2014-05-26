@@ -1,10 +1,10 @@
 package com.apress.springrecipes.weather;
 
-import java.util.List;
-import java.util.Date;
-import java.util.Arrays;
-
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
 
 
 public class WeatherServiceClient {
@@ -17,9 +17,9 @@ public class WeatherServiceClient {
     }
 
     public TemperatureInfo getTodayTemperature(String city) {
-        List<Date> dates = Arrays.asList(new Date[] { new Date() });
+        List<Date> dates = Arrays.asList(new Date[]{new Date()});
         List<TemperatureInfo> temperatures =
-            weatherService.getTemperatures(city, dates);
+                weatherService.getTemperatures(city, dates);
         return temperatures.get(0);
     }
 }

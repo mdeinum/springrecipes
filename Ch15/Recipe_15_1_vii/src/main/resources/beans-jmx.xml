@@ -10,12 +10,7 @@
 
     <bean id="mbeanExporter"
 	  class="org.springframework.jmx.export.annotation.AnnotationMBeanExporter">
-      <property name="beans">
-        <map>
-            <entry key="bean:name=documentReplicator"
-                value-ref="documentReplicator" />
-        </map>
-      </property>
+
       <property name="defaultDomain" value="bean" />
     </bean>
 

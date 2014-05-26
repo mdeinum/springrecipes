@@ -1,21 +1,16 @@
 package com.apress.springrecipes.replicator;
 
-import javax.management.Attribute;
-import javax.management.MBeanServerConnection;
-import javax.management.ObjectName;
-
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 public class Client {
 
     public static void main(String[] args) throws Exception {
         ApplicationContext context =
-            new GenericXmlApplicationContext("beans-jmx-client.xml");
+                new AnnotationConfigApplicationContext("com.apress.springrecipes.replicator.config");
 
-        FileReplicator fileReplicatorProxy =
-            (FileReplicator) context.getBean("fileReplicatorProxy");
+        FileReplicator fileReplicatorProxy = context.getBean(FileReplicator.class);
 
         String srcDir = fileReplicatorProxy.getSrcDir();
         fileReplicatorProxy.setDestDir(srcDir + "_backup");

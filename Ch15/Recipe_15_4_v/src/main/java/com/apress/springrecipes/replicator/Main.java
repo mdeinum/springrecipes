@@ -1,18 +1,16 @@
 package com.apress.springrecipes.replicator;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
- 
+
 public class Main {
 
     public static void main(String[] args) {
         ApplicationContext context =
-            new GenericXmlApplicationContext("beans.xml");
+                new AnnotationConfigApplicationContext("com.apress.springrecipes.replicator.config");
 
-        ErrorNotifier errorNotifier =
-            (ErrorNotifier) context.getBean("errorNotifier");
-        errorNotifier.notifyCopyError(
-            "c:/documents", "d:/documents", "spring.doc");
+        ErrorNotifier errorNotifier = context.getBean(ErrorNotifier.class);
+        errorNotifier.notifyCopyError("c:/documents", "d:/documents", "spring_15_4_v.doc");
     }
 }
