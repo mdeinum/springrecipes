@@ -12,7 +12,8 @@ project(':Ch17:Recipe_17_2_i') {
         compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
 
         // No activemq-all as that includes dependencies we don't want
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
 
@@ -28,7 +29,8 @@ project(':Ch17:Recipe_17_2_ii') {
         compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
         compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
 
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
 
@@ -44,7 +46,8 @@ project(':Ch17:Recipe_17_3_i') {
         compile group: 'org.springframework.integration', name: 'spring-integration-core', version: "$springIntegrationVersion"
 
         // No activemq-all as that includes dependencies we don't want
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
 
@@ -60,7 +63,8 @@ project(':Ch17:Recipe_17_3_ii') {
         compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
 
         // No activemq-all as that includes dependencies we don't want
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
 
@@ -76,7 +80,8 @@ project(':Ch17:Recipe_17_3_iii') {
         compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
 
         // No activemq-all as that includes dependencies we don't want
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
 
@@ -105,7 +110,8 @@ project(':Ch17:Recipe_17_5_i') {
         compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
 
         // No activemq-all as that includes dependencies we don't want
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
 
@@ -122,7 +128,8 @@ project(':Ch17:Recipe_17_5_ii') {
         compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
 
         // No activemq-all as that includes dependencies we don't want
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
 
@@ -138,7 +145,8 @@ project(':Ch17:Recipe_17_6_i') {
         compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
 
         // No activemq-all as that includes dependencies we don't want
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
 
@@ -154,7 +162,8 @@ project(':Ch17:Recipe_17_6_ii') {
         compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
 
         // No activemq-all as that includes dependencies we don't want
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
 
@@ -170,7 +179,8 @@ project(':Ch17:Recipe_17_6_iii') {
         compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
 
         // No activemq-all as that includes dependencies we don't want
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
 
@@ -253,6 +263,7 @@ project(':Ch17:Recipe_17_10_ii') {
         compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
 
         // No activemq-all as that includes dependencies we don't want
-        compile group: 'org.apache.activemq', name: 'activemq-core', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 } // End
