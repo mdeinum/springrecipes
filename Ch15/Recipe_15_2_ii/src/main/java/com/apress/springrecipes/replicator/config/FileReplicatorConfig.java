@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jmx.export.annotation.AnnotationMBeanExporter;
 
+import javax.annotation.PostConstruct;
 import javax.management.NotificationListener;
 import java.io.File;
 import java.util.HashMap;
@@ -14,26 +15,25 @@ import java.util.Map;
 
 @Configuration
 public class FileReplicatorConfig {
-    
+
     @Value("#{systemProperties['user.home']}/docs")
     private String srcDir;
-    @Value("#{systemProperties['user.home']}/docs_backup")    
-    private String destDir;    
+    @Value("#{systemProperties['user.home']}/docs_backup")
+    private String destDir;
 
     @Bean
-    public FileCopier fileCopier() { 
-	FileCopier fCop = new FileCopierJMXImpl();
-	return fCop;
+    public FileCopier fileCopier() {
+        FileCopier fCop = new FileCopierJMXImpl();
+        return fCop;
     }
 
-    @Bean           
+    @Bean
     public FileReplicator documentReplicator() {
-	FileReplicator fRep = new FileReplicatorJMXImpl();       
-	verifyDirectoriesExist();
-	fRep.setSrcDir(srcDir);
-	fRep.setDestDir(destDir);
+        FileReplicator fRep = new FileReplicatorJMXImpl();
+        fRep.setSrcDir(srcDir);
+        fRep.setDestDir(destDir);
         fRep.setFileCopier(fileCopier());
-	return fRep;
+        return fRep;
     }
 
     @Bean
@@ -50,12 +50,13 @@ public class FileReplicatorConfig {
         return mappings;
     }
 
-    private void verifyDirectoriesExist() {
+    @PostConstruct
+    public void verifyDirectoriesExist() {
         File src = new File(srcDir);
         File dest = new File(destDir);
         if (!src.exists())
-	    src.mkdirs();
+            src.mkdirs();
         if (!dest.exists())
             dest.mkdirs();
-    }    
+    }
 }

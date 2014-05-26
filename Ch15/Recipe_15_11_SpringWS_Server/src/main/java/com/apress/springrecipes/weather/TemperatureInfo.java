@@ -1,7 +1,7 @@
 package com.apress.springrecipes.weather;
 
+import java.io.Serializable;
 import java.util.Date;
-import java.io.Serializable; 
 
 
 public class TemperatureInfo implements Serializable {

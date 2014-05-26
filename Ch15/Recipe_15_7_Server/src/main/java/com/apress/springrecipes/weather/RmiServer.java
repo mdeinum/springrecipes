@@ -1,10 +1,10 @@
 package com.apress.springrecipes.weather;
 
-import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class RmiServer {
 
     public static void main(String[] args) {
-        new GenericXmlApplicationContext("appContext.xml");
+        new AnnotationConfigApplicationContext("com.apress.springrecipes.weather.config");
     }
 }

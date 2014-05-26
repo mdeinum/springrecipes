@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 
 
@@ -28,14 +29,14 @@ public class FileReplicatorConfig {
     @Bean
     public FileReplicator documentReplicator() {
         FileReplicator fRep = new FileReplicatorImpl();
-        verifyDirectoriesExist();
         fRep.setSrcDir(srcDir);
         fRep.setDestDir(destDir);
         fRep.setFileCopier(fileCopier());
         return fRep;
     }
 
-    private void verifyDirectoriesExist() {
+    @PostConstruct
+    public void verifyDirectoriesExist() {
         File src = new File(srcDir);
         File dest = new File(destDir);
         if (!src.exists())

@@ -17,6 +17,5 @@ public class JmxConfig {
         mbeanExporter.setDefaultDomain("bean");
         return mbeanExporter;
     }
-
 }
 

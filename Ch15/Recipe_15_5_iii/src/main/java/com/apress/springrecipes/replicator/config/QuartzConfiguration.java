@@ -29,6 +29,15 @@ public class QuartzConfiguration {
         return documentReplicationJob;
     }
 
+//    @Bean
+//    @Autowired
+//    public MethodInvokingJobDetailFactoryBean documentReplicationJob(FileReplicator fileReplicator) {
+//        MethodInvokingJobDetailFactoryBean documentReplicationJob = new MethodInvokingJobDetailFactoryBean();
+//        documentReplicationJob.setTargetObject(fileReplicator);
+//        documentReplicationJob.setTargetMethod("replicatie");
+//        return documentReplicationJob;
+//    }
+
     @Bean
     @Autowired
     public SimpleTriggerFactoryBean documentReplicationTrigger(JobDetail documentReplicationJob) {

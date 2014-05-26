@@ -1105,7 +1105,9 @@ project(':Ch15:Recipe_15_11_SpringWS_Server') {
     compile group: 'org.springframework', name: 'spring-web', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
 
-    compile group: 'org.springframework.ws', name: 'spring-ws-core', version:"$springWsVersion"	
+    compile group: 'org.springframework.ws', name: 'spring-ws-core', version:"$springWsVersion"
+    compile group: 'org.springframework.ws', name: 'spring-xml', version:"$springWsVersion"
+    compile group: 'wsdl4j', name: 'wsdl4j', version: '1.6.3'
     compile group: 'dom4j', name: 'dom4j', version:'1.6.1'
     compile group: 'jaxen', name: 'jaxen', version:'1.1.4'            
    }
@@ -1128,7 +1130,7 @@ project(':Ch15:Recipe_15_11_SpringWS_Client') {
     compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
     compile group: 'org.springframework.ws', name: 'spring-ws-core', version:"$springWsVersion"	
-    compile group: 'org.springframework.ws', name: 'spring-xml', version:"$springWsVersion"	
+    compile group: 'org.springframework.ws', name: 'spring-xml', version:"$springWsVersion"
     compile group: 'dom4j', name: 'dom4j', version:'1.6.1'
    }
    // Define how to build final JAR for project
@@ -1168,10 +1170,12 @@ project(':Ch15:Recipe_15_12_SpringWS_Server') {
     compile group: 'org.springframework', name: 'spring-web', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
 
-    compile group: 'org.springframework.ws', name: 'spring-ws-core', version:"$springWsVersion"	
+    compile group: 'org.springframework.ws', name: 'spring-ws-core', version:"$springWsVersion"
+    compile group: 'org.springframework.ws', name: 'spring-xml', version:"$springWsVersion"
+    compile group: 'wsdl4j', name: 'wsdl4j', version: '1.6.3'
     compile group: 'dom4j', name: 'dom4j', version:'1.6.1'
     compile group: 'jaxen', name: 'jaxen', version:'1.1.4'
-    compile group: 'org.codehaus.castor', name:'castor-xml', version:'1.3.2'
+    compile group: 'org.codehaus.castor', name:'castor-xml', version:'1.3.3'
 	compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
             
    }
@@ -1195,8 +1199,8 @@ project(':Ch15:Recipe_15_12_SpringWS_Client') {
     compile group: 'org.springframework.ws', name: 'spring-ws-core', version:"$springWsVersion"	
     compile group: 'org.springframework.ws', name: 'spring-xml', version:"$springWsVersion"	  
     compile group: 'dom4j', name: 'dom4j', version:'1.6.1'
-    compile group: 'org.codehaus.castor', name:'castor-xml', version:'1.3.2'
-    compile group: 'org.codehaus.castor', name:'castor-core', version:'1.3.2'
+    compile group: 'org.codehaus.castor', name:'castor-xml', version:'1.3.3'
+    compile group: 'org.codehaus.castor', name:'castor-core', version:'1.3.3'
     compile group: 'commons-lang', name: 'commons-lang', version:'2.6'   
    }
    // Define how to build final JAR for project
