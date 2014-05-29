@@ -2,13 +2,10 @@ package com.apress.springrecipes.vehicle;
 
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
 
-import javax.sql.DataSource;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,6 +13,7 @@ import java.util.Map;
 public class JdbcVehicleDao extends NamedParameterJdbcDaoSupport implements VehicleDao {
 
 
+    @Override
     public void insert(final Vehicle vehicle) {
         String sql = "INSERT INTO VEHICLE (VEHICLE_NO, COLOR, WHEEL, SEAT) VALUES (:vehicleNo, :color, :wheel, :seat)";
         Map<String, Object> parameters = new HashMap<>();
@@ -46,16 +44,19 @@ public class JdbcVehicleDao extends NamedParameterJdbcDaoSupport implements Vehi
         });
     }
 
+    @Override
     public Vehicle findByVehicleNo(String vehicleNo) {
         String sql = "SELECT * FROM VEHICLE WHERE VEHICLE_NO = ?";
         return getJdbcTemplate().queryForObject(sql, BeanPropertyRowMapper.newInstance(Vehicle.class), vehicleNo);
     }
 
+    @Override
     public void update(Vehicle vehicle) {
         String sql = "UPDATE VEHICLE SET COLOR=?,WHEEL=?,SEAT=? WHERE VEHICLE_NO=?";
         getJdbcTemplate().update(sql, vehicle.getColor(), vehicle.getWheel(), vehicle.getSeat(), vehicle.getVehicleNo());
     }
 
+    @Override
     public void delete(Vehicle vehicle) {
         String sql = "DELETE FROM VEHICLE WHERE VEHICLE_NO=?";
         getJdbcTemplate().update(sql, vehicle.getVehicleNo());

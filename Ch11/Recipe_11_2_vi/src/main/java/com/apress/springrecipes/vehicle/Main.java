@@ -1,9 +1,8 @@
 package com.apress.springrecipes.vehicle;
 
+import com.apress.springrecipes.vehicle.config.VehicleConfiguration;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.List;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * Created by marten on 24-03-14.
@@ -11,9 +10,9 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        ApplicationContext context = new ClassPathXmlApplicationContext("vehicle-context.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext(VehicleConfiguration.class);
 
-        VehicleDao vehicleDao = (VehicleDao) context.getBean("vehicleDao");
+        VehicleDao vehicleDao = context.getBean(VehicleDao.class);
         int count = vehicleDao.countAll();
         System.out.println("Vehicle Count: " + count);
         String color = vehicleDao.getColor("TEM0001");

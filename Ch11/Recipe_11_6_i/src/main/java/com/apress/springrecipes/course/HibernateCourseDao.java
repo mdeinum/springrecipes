@@ -20,6 +20,7 @@ public class HibernateCourseDao implements CourseDao {
         sessionFactory = configuration.buildSessionFactory();
     }
 
+    @Override
     public void store(Course course) {
         Session session = sessionFactory.openSession();
         Transaction tx = session.getTransaction();
@@ -35,6 +36,7 @@ public class HibernateCourseDao implements CourseDao {
         }
     }
 
+    @Override
     public void delete(Long courseId) {
         Session session = sessionFactory.openSession();
         Transaction tx = session.getTransaction();
@@ -51,6 +53,7 @@ public class HibernateCourseDao implements CourseDao {
         }
     }
 
+    @Override
     public Course findById(Long courseId) {
         Session session = sessionFactory.openSession();
         try {
@@ -60,6 +63,7 @@ public class HibernateCourseDao implements CourseDao {
         }
     }
 
+    @Override
     public List<Course> findAll() {
         Session session = sessionFactory.openSession();
         try {
@@ -69,5 +73,4 @@ public class HibernateCourseDao implements CourseDao {
             session.close();
         }
     }
-
 }

@@ -2,7 +2,6 @@ package com.apress.springrecipes.vehicle;
 
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 import java.sql.PreparedStatement;
@@ -35,17 +34,20 @@ public class JdbcVehicleDao extends JdbcDaoSupport implements VehicleDao {
         });
     }
 
+    @Override
     public Vehicle findByVehicleNo(String vehicleNo) {
         String sql = "SELECT * FROM VEHICLE WHERE VEHICLE_NO = ?";
         Vehicle vehicle = getJdbcTemplate().queryForObject(sql, BeanPropertyRowMapper.newInstance(Vehicle.class), vehicleNo);
         return vehicle;
     }
 
+    @Override
     public void update(Vehicle vehicle) {
         String sql = "UPDATE VEHICLE SET COLOR=?,WHEEL=?,SEAT=? WHERE VEHICLE_NO=?";
         getJdbcTemplate().update(sql, vehicle.getColor(), vehicle.getWheel(), vehicle.getSeat(), vehicle.getVehicleNo());
     }
 
+    @Override
     public void delete(Vehicle vehicle) {
         String sql = "DELETE FROM VEHICLE WHERE VEHICLE_NO=?";
         getJdbcTemplate().update(sql, vehicle.getVehicleNo());

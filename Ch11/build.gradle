@@ -7,8 +7,8 @@ project(':Ch11:Recipe_11_0_i') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -23,8 +23,8 @@ project(':Ch11:Recipe_11_0_ii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -40,8 +40,8 @@ project(':Ch11:Recipe_11_0_iii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -57,8 +57,8 @@ project(':Ch11:Recipe_11_0_iv') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -74,8 +74,8 @@ project(':Ch11:Recipe_11_1_i') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -91,8 +91,8 @@ project(':Ch11:Recipe_11_1_ii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -108,8 +108,8 @@ project(':Ch11:Recipe_11_1_iii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -125,8 +125,8 @@ project(':Ch11:Recipe_11_1_iv') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -142,8 +142,8 @@ project(':Ch11:Recipe_11_1_v') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -159,8 +159,8 @@ project(':Ch11:Recipe_11_2_i') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -176,8 +176,8 @@ project(':Ch11:Recipe_11_2_ii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -193,8 +193,8 @@ project(':Ch11:Recipe_11_2_iii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -210,8 +210,8 @@ project(':Ch11:Recipe_11_2_iv') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -227,8 +227,8 @@ project(':Ch11:Recipe_11_2_v') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -244,8 +244,8 @@ project(':Ch11:Recipe_11_2_vi') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -261,8 +261,8 @@ project(':Ch11:Recipe_11_3_i') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -278,8 +278,8 @@ project(':Ch11:Recipe_11_3_ii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -295,8 +295,8 @@ project(':Ch11:Recipe_11_4_i') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -312,8 +312,8 @@ project(':Ch11:Recipe_11_4_ii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -329,8 +329,8 @@ project(':Ch11:Recipe_11_4_iii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -346,8 +346,8 @@ project(':Ch11:Recipe_11_4_iv') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -363,8 +363,8 @@ project(':Ch11:Recipe_11_5_i') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -380,8 +380,8 @@ project(':Ch11:Recipe_11_5_ii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -397,8 +397,8 @@ project(':Ch11:Recipe_11_5_iii') {
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
     }
     // Define how to build final JAR for project
@@ -415,8 +415,8 @@ project(':Ch11:Recipe_11_6_i') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -434,8 +434,8 @@ project(':Ch11:Recipe_11_6_ii') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -453,8 +453,8 @@ project(':Ch11:Recipe_11_6_iii') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -472,8 +472,8 @@ project(':Ch11:Recipe_11_6_iv') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -491,8 +491,8 @@ project(':Ch11:Recipe_11_7_i') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -510,8 +510,8 @@ project(':Ch11:Recipe_11_7_ii') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -529,8 +529,8 @@ project(':Ch11:Recipe_11_7_iii') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -548,8 +548,8 @@ project(':Ch11:Recipe_11_7_iv') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -567,8 +567,8 @@ project(':Ch11:Recipe_11_7_v') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -586,8 +586,8 @@ project(':Ch11:Recipe_11_7_vi') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -605,8 +605,8 @@ project(':Ch11:Recipe_11_8_i') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -624,8 +624,8 @@ project(':Ch11:Recipe_11_8_ii') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -643,8 +643,8 @@ project(':Ch11:Recipe_11_9_i') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -662,8 +662,8 @@ project(':Ch11:Recipe_11_9_ii') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -681,8 +681,8 @@ project(':Ch11:Recipe_11_9_iii') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -700,8 +700,8 @@ project(':Ch11:Recipe_11_10_i') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -719,8 +719,8 @@ project(':Ch11:Recipe_11_10_ii') {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
@@ -739,8 +739,8 @@ project(':Ch11:Recipe_11_11') {
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.springframework.data', name: 'spring-data-jpa', version:"$springDataJpaVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }

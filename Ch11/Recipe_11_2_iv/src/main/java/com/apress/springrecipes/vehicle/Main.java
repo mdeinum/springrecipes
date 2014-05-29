@@ -1,9 +1,9 @@
 package com.apress.springrecipes.vehicle;
 
+import com.apress.springrecipes.vehicle.config.VehicleConfiguration;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -12,9 +12,9 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        ApplicationContext context = new ClassPathXmlApplicationContext("vehicle-context.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext(VehicleConfiguration.class);
 
-        VehicleDao vehicleDao = context.getBean("vehicleDao", VehicleDao.class);
+        VehicleDao vehicleDao = context.getBean(VehicleDao.class);
         List<Vehicle> vehicles = vehicleDao.findAll();
         for (Vehicle vehicle : vehicles) {
             System.out.println("Vehicle No: " + vehicle.getVehicleNo());
