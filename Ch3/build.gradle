@@ -14,15 +14,7 @@ project(':Ch3:Recipe_3_1_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_1_i project 
 
@@ -42,15 +34,7 @@ project(':Ch3:Recipe_3_1_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_1_ii project 
 
@@ -70,15 +54,7 @@ project(':Ch3:Recipe_3_1_iii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_1_iii project 
 
@@ -99,15 +75,7 @@ project(':Ch3:Recipe_3_2') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_2 project 
 
@@ -127,15 +95,7 @@ project(':Ch3:Recipe_3_3_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_3_i project 
 
@@ -156,15 +116,7 @@ project(':Ch3:Recipe_3_3_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_3_ii project 
 
@@ -185,15 +137,7 @@ project(':Ch3:Recipe_3_3_iii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_3_iii project 
 
@@ -214,15 +158,7 @@ project(':Ch3:Recipe_3_3_iv') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_3_iv project 
 
@@ -243,15 +179,7 @@ project(':Ch3:Recipe_3_3_v') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_3_v project 
 
@@ -272,15 +200,7 @@ project(':Ch3:Recipe_3_3_vi') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_3_vi project 
 
@@ -300,15 +220,7 @@ project(':Ch3:Recipe_3_3_vii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_3_vii project 
 
@@ -328,15 +240,7 @@ project(':Ch3:Recipe_3_4_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_4_i project 
 
@@ -358,15 +262,7 @@ project(':Ch3:Recipe_3_4_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_4_ii project 
 
@@ -386,15 +282,7 @@ project(':Ch3:Recipe_3_5_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_5_i project 
 
@@ -414,15 +302,7 @@ project(':Ch3:Recipe_3_5_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_5_ii project 
 
@@ -443,15 +323,7 @@ project(':Ch3:Recipe_3_6_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_6_i project 
 
@@ -472,15 +344,7 @@ project(':Ch3:Recipe_3_6_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_6_ii project 
 
@@ -501,15 +365,7 @@ project(':Ch3:Recipe_3_7') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_7 project 
 
@@ -530,15 +386,7 @@ project(':Ch3:Recipe_3_8_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_8_i project 
 
@@ -559,15 +407,7 @@ project(':Ch3:Recipe_3_8_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_8_ii project 
 
@@ -587,15 +427,7 @@ project(':Ch3:Recipe_3_8_iii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_8_iii project 
 
@@ -615,15 +447,7 @@ project(':Ch3:Recipe_3_8_iv') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_8_iv project 
 
@@ -643,16 +467,8 @@ project(':Ch3:Recipe_3_9_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
-   }
+    }
 } // End 3_9_i project 
 
 
@@ -672,15 +488,7 @@ project(':Ch3:Recipe_3_9_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_9_ii project 
 
@@ -701,15 +509,7 @@ project(':Ch3:Recipe_3_9_iii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_9_iii project 
 
@@ -730,15 +530,7 @@ project(':Ch3:Recipe_3_9_iv') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_9_iv project 
 
@@ -759,15 +551,7 @@ project(':Ch3:Recipe_3_10_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_10_i project 
 
@@ -788,15 +572,7 @@ project(':Ch3:Recipe_3_10_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_10_ii project 
 
@@ -817,15 +593,7 @@ project(':Ch3:Recipe_3_10_iii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_10_iii project 
 
@@ -846,15 +614,7 @@ project(':Ch3:Recipe_3_11') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_11 project 
 
@@ -879,15 +639,7 @@ project(':Ch3:Recipe_3_12_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_12_i project 
 
@@ -911,15 +663,7 @@ project(':Ch3:Recipe_3_12_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_12_ii project 
 
@@ -943,15 +687,7 @@ project(':Ch3:Recipe_3_12_iii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_12_iii project 
 
@@ -975,15 +711,7 @@ project(':Ch3:Recipe_3_12_iv') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_12_iv project 
 
@@ -1008,15 +736,7 @@ project(':Ch3:Recipe_3_12_v') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_12_v project 
 
@@ -1041,16 +761,8 @@ project(':Ch3:Recipe_3_13') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
-   }
+    }
 } // End 3_13 project 
 
 
@@ -1074,15 +786,7 @@ project(':Ch3:Recipe_3_14_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_14_i project 
 
@@ -1106,15 +810,7 @@ project(':Ch3:Recipe_3_14_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_14_ii project 
 
@@ -1138,15 +834,7 @@ project(':Ch3:Recipe_3_15_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_15_i project 
 
@@ -1170,16 +858,8 @@ project(':Ch3:Recipe_3_15_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
-   }
+  }
 } // End 3_15_ii project 
 
 // Define 3_16_i project
@@ -1201,15 +881,7 @@ project(':Ch3:Recipe_3_16_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_16_i project 
 
@@ -1233,15 +905,7 @@ project(':Ch3:Recipe_3_16_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_16_ii project 
 
@@ -1265,15 +929,7 @@ project(':Ch3:Recipe_3_16_iii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_16_iii project 
 
@@ -1297,15 +953,7 @@ project(':Ch3:Recipe_3_16_iv') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_16_iv project 
 
@@ -1329,15 +977,7 @@ project(':Ch3:Recipe_3_17') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_17 project 
 
@@ -1360,15 +1000,7 @@ project(':Ch3:Recipe_3_18') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_18 project 
 
@@ -1392,15 +1024,7 @@ project(':Ch3:Recipe_3_19_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_19_i project 
 
@@ -1426,15 +1050,7 @@ project(':Ch3:Recipe_3_19_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_19_ii project 
 
@@ -1461,16 +1077,8 @@ project(':Ch3:Recipe_3_19_iii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
-   }
+    }
 } // End 3_19_iii project 
 
 // Define 3_20 project
@@ -1494,16 +1102,8 @@ project(':Ch3:Recipe_3_20') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
-   }
+    }
 } // End 3_20 project 
 
 
@@ -1530,15 +1130,7 @@ project(':Ch3:Recipe_3_21') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_21 project 
 
@@ -1556,15 +1148,7 @@ project(':Ch3:Recipe_3_22_i') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.executors.ExecutorsDemo")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_22_i project 
 
@@ -1586,14 +1170,6 @@ project(':Ch3:Recipe_3_22_ii') {
      //The following creates a fat-JAR with all dependencies embedded 
      // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
      //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.executors.SpringExecutorsDemo")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 3_22_ii project 
