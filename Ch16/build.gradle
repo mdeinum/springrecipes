@@ -1,3 +1,5 @@
+description='Spring Recipes :: Chapter 16 :: Spring Messaging'
+
 // Define 16_1_i_FrontDesk project
 project(':Ch16:Recipe_16_1_i_FrontDesk') {   
   // Define defaultTasks, first clean then build for springintro
@@ -15,18 +17,7 @@ project(':Ch16:Recipe_16_1_i_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_1_i_FrontDesk project 
 
@@ -47,18 +38,7 @@ project(':Ch16:Recipe_16_1_i_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_1_i_BackOffice project 
 
@@ -82,18 +62,7 @@ project(':Ch16:Recipe_16_1_ii_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_1_ii_FrontDesk project 
 
@@ -116,18 +85,7 @@ project(':Ch16:Recipe_16_1_ii_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_1_ii_BackOffice project 
 
@@ -150,18 +108,7 @@ project(':Ch16:Recipe_16_1_iii_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_1_iii_FrontDesk project 
 
@@ -184,18 +131,7 @@ project(':Ch16:Recipe_16_1_iii_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_1_iii_BackOffice project 
 
@@ -218,18 +154,7 @@ project(':Ch16:Recipe_16_1_iv_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_1_iv_FrontDesk project 
 
@@ -252,18 +177,7 @@ project(':Ch16:Recipe_16_1_iv_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_1_iv_BackOffice project 
 
@@ -285,18 +199,7 @@ project(':Ch16:Recipe_16_2_i_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_2_i_FrontDesk project 
 
@@ -319,18 +222,7 @@ project(':Ch16:Recipe_16_2_i_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_2_i_BackOffice project 
 
@@ -353,18 +245,7 @@ project(':Ch16:Recipe_16_2_ii_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_2_ii_FrontDesk project 
 
@@ -387,18 +268,7 @@ project(':Ch16:Recipe_16_2_ii_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_2_ii_BackOffice project 
 
@@ -423,18 +293,7 @@ project(':Ch16:Recipe_16_3_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_3_FrontDesk project 
 
@@ -460,18 +319,7 @@ project(':Ch16:Recipe_16_3_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_3_BackOffice project 
 
@@ -494,18 +342,7 @@ project(':Ch16:Recipe_16_4_i_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_4_i_FrontDesk project 
 
@@ -528,18 +365,7 @@ project(':Ch16:Recipe_16_4_i_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_4_i_BackOffice project 
 
@@ -561,18 +387,7 @@ project(':Ch16:Recipe_16_4_ii_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_4_ii_FrontDesk project 
 
@@ -595,18 +410,7 @@ project(':Ch16:Recipe_16_4_ii_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_4_ii_BackOffice project 
 
@@ -628,18 +432,7 @@ project(':Ch16:Recipe_16_4_iii_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_4_iii_FrontDesk project 
 
@@ -662,18 +455,7 @@ project(':Ch16:Recipe_16_4_iii_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_4_iii_BackOffice project 
 
@@ -695,18 +477,7 @@ project(':Ch16:Recipe_16_4_iv_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_4_iv_FrontDesk project 
 
@@ -729,18 +500,7 @@ project(':Ch16:Recipe_16_4_iv_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_4_iv_BackOffice project 
 
@@ -762,18 +522,7 @@ project(':Ch16:Recipe_16_4_v_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_4_v_FrontDesk project 
 
@@ -796,18 +545,7 @@ project(':Ch16:Recipe_16_4_v_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_4_v_BackOffice project 
 
@@ -830,18 +568,7 @@ project(':Ch16:Recipe_16_5_FrontDesk') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_5_FrontDesk project 
 
@@ -866,17 +593,51 @@ project(':Ch16:Recipe_16_5_BackOffice') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     dependsOn copyDependenciesToLibDir
      manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-     project.ext["CP"] = new StringBuffer()
-     configurations.runtime.allDependencies.each { dep ->
-       project.ext["CP"].append(' ')
-       project.ext["CP"].append("lib/${dep.getName()}-${dep.getVersion()}.jar")
-     }
-     project.ext["CP"].delete(0,1)
-     manifest.attributes("Class-Path": project.ext["CP"].toString())
    }
 } // End 16_5_BackOffice project 
+
+// Define 16_6_FrontDesk project
+project(':Ch16:Recipe_16_6_FrontDesk') {
+    // Define defaultTasks, first clean then build for springintro
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework.amqp', name: 'spring-rabbit', version: "$springAmqpVersion"
+        compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.0'
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
+    }
+} // End 16_5_FrontDesk project
+
+
+// Define 16_5_BackOffice project
+project(':Ch16:Recipe_16_6_BackOffice') {
+  // Define defaultTasks, first clean then build for springintro
+defaultTasks 'clean', 'build'
+// Define dependencies
+dependencies {
+    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
+    compile group: 'org.springframework.amqp', name: 'spring-rabbit', version: "$springAmqpVersion"
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.0'
+
+}
+// Define how to build final JAR for project
+jar {
+    //The following creates a fat-JAR with all dependencies embedded
+    // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    //Instead use custom task to copy files to lib directory and create a custom manfiest
+    manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
+}
+} // End 16_5_BackOffice project
