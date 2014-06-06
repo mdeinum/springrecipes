@@ -62,6 +62,8 @@ include 'Ch4:Recipe_4_1_i','Ch4:Recipe_4_1_ii','Ch4:Recipe_4_1_iii',\
 
 include 'Ch5:Recipe_5_1'
 
+include 'Ch8:Recipe_8_1'
+
 include 'Ch11:Recipe_11_0_i','Ch11:Recipe_11_0_ii','Ch11:Recipe_11_0_iii','Ch11:Recipe_11_0_iv',\
         'Ch11:Recipe_11_1_i','Ch11:Recipe_11_1_ii','Ch11:Recipe_11_1_iii','Ch11:Recipe_11_1_iv','Ch11:Recipe_11_1_v',\
         'Ch11:Recipe_11_2_i','Ch11:Recipe_11_2_ii','Ch11:Recipe_11_2_iii','Ch11:Recipe_11_2_iv','Ch11:Recipe_11_2_v','Ch11:Recipe_11_2_vi',\
@@ -75,7 +77,16 @@ include 'Ch11:Recipe_11_0_i','Ch11:Recipe_11_0_ii','Ch11:Recipe_11_0_iii','Ch11:
         'Ch11:Recipe_11_10_i','Ch11:Recipe_11_10_ii',\
         'Ch11:Recipe_11_11'
 
-include 'Ch12:Recipe_12_1_i','Ch12:Recipe_12_1_ii'
+include 'Ch12:Recipe_12_1_i','Ch12:Recipe_12_1_ii',\
+        'Ch12:Recipe_12_3_i',\
+        'Ch12:Recipe_12_4_i','Ch12:Recipe_12_4_ii',\
+        'Ch12:Recipe_12_5_i',\
+        'Ch12:Recipe_12_6_i','Ch12:Recipe_12_6_ii','Ch12:Recipe_12_6_iii',\
+        'Ch12:Recipe_12_7_i','Ch12:Recipe_12_7_ii','Ch12:Recipe_12_7_iii',\
+        'Ch12:Recipe_12_8_i','Ch12:Recipe_12_8_ii','Ch12:Recipe_12_8_iii','Ch12:Recipe_12_8_iv','Ch12:Recipe_12_8_v',\
+        'Ch12:Recipe_12_9_i',\
+        'Ch12:Recipe_12_10_i',\
+        'Ch12:Recipe_12_11_i'
 
 include 'Ch13:Recipe_13_1_i','Ch13:Recipe_13_1_ii','Ch13:Recipe_13_1_iii',\
         'Ch13:Recipe_13_2_i','Ch13:Recipe_13_2_ii',\
@@ -91,7 +102,12 @@ include 'Ch15:Recipe_15_1_i','Ch15:Recipe_15_1_ii','Ch15:Recipe_15_1_iii','Ch15:
         'Ch15:Recipe_15_3_i','Ch15:Recipe_15_3_ii',\
         'Ch15:Recipe_15_4_i','Ch15:Recipe_15_4_ii','Ch15:Recipe_15_4_iii','Ch15:Recipe_15_4_iv','Ch15:Recipe_15_4_v','Ch15:Recipe_15_5_i','Ch15:Recipe_15_5_ii','Ch15:Recipe_15_5_iii','Ch15:Recipe_15_5_iv','Ch15:Recipe_15_6_i','Ch15:Recipe_15_6_ii','Ch15:Recipe_15_7_Client','Ch15:Recipe_15_7_Server','Ch15:Recipe_15_8_Burlap_Server','Ch15:Recipe_15_8_Burlap_Client','Ch15:Recipe_15_8_Hessian_Server','Ch15:Recipe_15_8_Hessian_Client','Ch15:Recipe_15_8_HTTPInvoker_Server','Ch15:Recipe_15_8_HTTPInvoker_Client','Ch15:Recipe_15_9_JDK_Server','Ch15:Recipe_15_9_CXF_Server','Ch15:Recipe_15_9_CXF_Client','Ch15:Recipe_15_9_SpringJaxWs_Client','Ch15:Recipe_15_11_SpringWS_Server','Ch15:Recipe_15_11_SpringWS_Client','Ch15:Recipe_15_12_SpringWS_Server','Ch15:Recipe_15_12_SpringWS_Client'
 
-include 'Ch16:Recipe_16_1_i_FrontDesk','Ch16:Recipe_16_1_i_BackOffice','Ch16:Recipe_16_1_ii_FrontDesk','Ch16:Recipe_16_1_ii_BackOffice','Ch16:Recipe_16_1_iii_FrontDesk','Ch16:Recipe_16_1_iii_BackOffice','Ch16:Recipe_16_1_iv_FrontDesk','Ch16:Recipe_16_1_iv_BackOffice','Ch16:Recipe_16_2_i_FrontDesk','Ch16:Recipe_16_2_i_BackOffice','Ch16:Recipe_16_2_ii_FrontDesk','Ch16:Recipe_16_2_ii_BackOffice','Ch16:Recipe_16_3_FrontDesk','Ch16:Recipe_16_3_BackOffice','Ch16:Recipe_16_4_i_FrontDesk','Ch16:Recipe_16_4_i_BackOffice','Ch16:Recipe_16_4_ii_FrontDesk','Ch16:Recipe_16_4_ii_BackOffice','Ch16:Recipe_16_4_iii_FrontDesk','Ch16:Recipe_16_4_iii_BackOffice','Ch16:Recipe_16_4_iv_FrontDesk','Ch16:Recipe_16_4_iv_BackOffice','Ch16:Recipe_16_4_v_FrontDesk','Ch16:Recipe_16_4_v_BackOffice','Ch16:Recipe_16_5_FrontDesk','Ch16:Recipe_16_5_BackOffice'
+include 'Ch16:Recipe_16_1_i_FrontDesk','Ch16:Recipe_16_1_i_BackOffice','Ch16:Recipe_16_1_ii_FrontDesk','Ch16:Recipe_16_1_ii_BackOffice','Ch16:Recipe_16_1_iii_FrontDesk','Ch16:Recipe_16_1_iii_BackOffice','Ch16:Recipe_16_1_iv_FrontDesk','Ch16:Recipe_16_1_iv_BackOffice',\
+        'Ch16:Recipe_16_2_i_FrontDesk','Ch16:Recipe_16_2_i_BackOffice','Ch16:Recipe_16_2_ii_FrontDesk','Ch16:Recipe_16_2_ii_BackOffice',\
+        'Ch16:Recipe_16_3_FrontDesk','Ch16:Recipe_16_3_BackOffice',\
+        'Ch16:Recipe_16_4_i_FrontDesk','Ch16:Recipe_16_4_i_BackOffice','Ch16:Recipe_16_4_ii_FrontDesk','Ch16:Recipe_16_4_ii_BackOffice','Ch16:Recipe_16_4_iii_FrontDesk','Ch16:Recipe_16_4_iii_BackOffice','Ch16:Recipe_16_4_iv_FrontDesk','Ch16:Recipe_16_4_iv_BackOffice','Ch16:Recipe_16_4_v_FrontDesk','Ch16:Recipe_16_4_v_BackOffice',\
+        'Ch16:Recipe_16_5_FrontDesk','Ch16:Recipe_16_5_BackOffice',\
+        'Ch16:Recipe_16_6_FrontDesk','Ch16:Recipe_16_6_BackOffice'
 
 include 'Ch17:Recipe_17_2_i','Ch17:Recipe_17_2_ii',\
         'Ch17:Recipe_17_3_i','Ch17:Recipe_17_3_ii','Ch17:Recipe_17_3_iii',\
