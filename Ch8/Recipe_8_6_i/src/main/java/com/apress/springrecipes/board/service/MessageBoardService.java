@@ -1,8 +1,8 @@
 package com.apress.springrecipes.board.service;
 
-import java.util.List;
-
 import com.apress.springrecipes.board.domain.Message;
+
+import java.util.List;
 
 public interface MessageBoardService {
 

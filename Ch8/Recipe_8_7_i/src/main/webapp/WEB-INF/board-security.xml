@@ -13,14 +13,20 @@
         <form-login />
     </http>
 
+    <beans:bean id="userCache" class="org.springframework.security.core.userdetails.cache.EhCacheBasedUserCache">
+        <beans:property name="cache" ref="userEhCache" />
+    </beans:bean>
+
+    <beans:bean id="userEhCache"
+                class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+        <beans:property name="cacheManager" ref="cacheManager" />
+        <beans:property name="cacheName" value="userCache" />
+    </beans:bean>
 
 
     <authentication-manager>
         <authentication-provider>
-            <user-service>
-                <user name="admin" password="secret" authorities="ROLE_ADMIN,ROLE_USER" />
-                <user name="user1" password="1111" authorities="ROLE_USER" />
-            </user-service>
+            <jdbc-user-service data-source-ref="dataSource" />
         </authentication-provider>
     </authentication-manager>
 </beans:beans>

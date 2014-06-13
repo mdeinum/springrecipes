@@ -6,11 +6,13 @@
         http://www.springframework.org/schema/security
         http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http auto-config="true">
+    <http>
         <intercept-url pattern="/messageList*"
                        access="ROLE_USER,ROLE_ANONYMOUS" />
         <intercept-url pattern="/messagePost*" access="ROLE_USER" />
         <intercept-url pattern="/messageDelete*" access="ROLE_ADMIN" />
+        <form-login />
+
     </http>
 
 

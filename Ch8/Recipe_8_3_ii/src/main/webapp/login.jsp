@@ -16,11 +16,11 @@
     <table>
         <tr>
             <td align="right">Username</td>
-            <td><input type="text" name="j_username" /></td>
+            <td><input type="text" name="username" /></td>
         </tr>
         <tr>
             <td align="right">Password</td>
-            <td><input type="password" name="j_password" /></td>
+            <td><input type="password" name="password" /></td>
         </tr>
         <tr>
             <td align="right">Remember me</td>

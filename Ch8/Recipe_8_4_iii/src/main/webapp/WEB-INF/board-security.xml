@@ -6,34 +6,18 @@
         http://www.springframework.org/schema/security
         http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http access-decision-manager-ref="_accessManager">
-        <intercept-url pattern="/messageList*"
-                       access="ROLE_USER,ROLE_ANONYMOUS" />
-        <intercept-url pattern="/messagePost*" access="ROLE_USER" />
-        <intercept-url pattern="/messageDelete*" access="ROLE_ADMIN,IP_LOCAL_HOST" />
+    <http use-expressions="true" >
+        <intercept-url pattern="/messageList*" access="hasAnyRole('ROLE_USER','ROLE_ANONYMOUS')" />
+        <intercept-url pattern="/messagePost*" access="hasRole('ROLE_USER')" />
+        <intercept-url pattern="/messageDelete*" access="hasRole('ROLE_ADMIN') or hasIpAddress('127.0.0.1') or hasIpAddress('0:0:0:0:0:0:0:1')" />
         <form-login />
-
     </http>
 
-
-    <beans:bean id="_accessManager"
-          class="org.springframework.security.access.vote.AffirmativeBased">
-        <beans:constructor-arg>
-            <beans:list>
-                <beans:bean class="org.springframework.security.access.vote.RoleVoter" />
-                <beans:bean class="org.springframework.security.access.vote.AuthenticatedVoter" />
-                <beans:bean class="com.apress.springrecipes.board.security.IpAddressVoter" />
-            </beans:list>
-        </beans:constructor-arg>
-    </beans:bean>
 
 
     <authentication-manager>
         <authentication-provider>
-            <user-service>
-                <user name="admin" password="secret"authorities="ROLE_ADMIN,ROLE_USER" />
-                <user name="user1" password="1111" authorities="ROLE_USER" />
-            </user-service>
+            <jdbc-user-service data-source-ref="dataSource" />
         </authentication-provider>
     </authentication-manager>
 </beans:beans>

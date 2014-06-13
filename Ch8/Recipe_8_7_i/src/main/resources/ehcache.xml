@@ -16,4 +16,14 @@
            timeToLiveSeconds="3600"
            overflowToDisk="true"
             />
+
+    <cache name="aclCache"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="600"
+           timeToLiveSeconds="3600"
+           overflowToDisk="true"
+            />
+
+
 </ehcache>

@@ -1,11 +1,11 @@
 package com.apress.springrecipes.board.web.config;
 
+import com.apress.springrecipes.board.security.ExtendedWebSecurityExpressionHandler;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler;
 
 /**
  * Created by marten on 06-06-14.
@@ -18,10 +18,10 @@ public class MessageBoardSecurityConfiguration extends WebSecurityConfigurerAdap
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .expressionHandler(new DefaultWebSecurityExpressionHandler())
+                .expressionHandler(new ExtendedWebSecurityExpressionHandler())
                 .antMatchers("/messageList*").hasAnyRole("USER", "GUEST")
                 .antMatchers("/messagePost*").hasRole("USER")
-                .antMatchers("/messageDelete*").hasRole("ADMIN")
+                .antMatchers("/messageDelete*").access("hasRole('ROLE_ADMIN) or hasIpAddress('127.0.0.1) or hasIpAddress('0:0:0:0:0:0:0:1')")
             .and()
                 .formLogin()
                     .loginPage("/login.jsp")

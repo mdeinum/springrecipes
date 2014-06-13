@@ -10,7 +10,7 @@
         <intercept-url pattern="/messageList*"
                        access="ROLE_USER,ROLE_ANONYMOUS" />
         <intercept-url pattern="/messagePost*" access="ROLE_USER" />
-        <intercept-url pattern="/messageDelete*" access="ROLE_ADMIN" />
+        <intercept-url pattern="/messageDelete*" access="ROLE_ADMIN,IP_LOCAL_HOST" />
         <form-login />
 
     </http>
@@ -22,6 +22,7 @@
             <beans:list>
                 <beans:bean class="org.springframework.security.access.vote.RoleVoter" />
                 <beans:bean class="org.springframework.security.access.vote.AuthenticatedVoter" />
+                <beans:bean class="com.apress.springrecipes.board.security.IpAddressVoter" />
             </beans:list>
         </beans:constructor-arg>
     </beans:bean>

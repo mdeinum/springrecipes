@@ -1,8 +1,14 @@
 description='Spring Recipes :: Chapter 8 :: Spring Security'
 
-project(':Ch8:Recipe_8_1') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
+project(':Ch8:Recipe_8_1_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
     // Define dependencies
     dependencies {
         compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
@@ -12,9 +18,367 @@ project(':Ch8:Recipe_8_1') {
 
         compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
         compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+//        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
     }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.bookshop.Main")
+}
+
+project(':Ch8:Recipe_8_1_ii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_1_iii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_2_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_2_ii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_3_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-context-support', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_3_ii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-context-support', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-ldap', version:"$springSecurityVersion"
+        compile group: 'org.springframework.ldap', name: 'spring-ldap-core', version: "$springLdapVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        compile group: 'net.sf.ehcache', name:'ehcache', version: "$ehCacheVersion"
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_4_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-taglibs', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_4_ii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-taglibs', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_4_iii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-taglibs', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_4_iv') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-taglibs', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_4_v') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-taglibs', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_6_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-taglibs', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch8:Recipe_8_7_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-context-support', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-taglibs', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+        compile group: 'net.sf.ehcache', name:'ehcache', version: "$ehCacheVersion"
+
+    }
+}
+
+project(':Ch8:Recipe_8_7_ii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    // Define dependencies
+    war {
+        archiveName='board.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-context-support', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-taglibs', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-web', version:"$springSecurityVersion"
+        compile group: 'org.springframework.security', name: 'spring-security-config', version:"$springSecurityVersion"
+
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+        compile group: 'net.sf.ehcache', name:'ehcache', version: "$ehCacheVersion"
+
     }
 }

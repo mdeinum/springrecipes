@@ -24,6 +24,4 @@ public class MessageBoardWebConfiguration {
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
-
-
 }

@@ -3,6 +3,8 @@ package com.apress.springrecipes.board.config;
 import com.apress.springrecipes.board.service.MessageBoardService;
 import com.apress.springrecipes.board.service.MessageBoardServiceImpl;
 import org.apache.derby.jdbc.ClientDriver;
+import org.springframework.cache.ehcache.EhCacheCacheManager;
+import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -29,4 +31,17 @@ public class MessageBoardConfiguration {
         dataSource.setPassword("app");
         return dataSource;
     }
+
+    @Bean
+    public EhCacheCacheManager cacheManager() {
+        EhCacheCacheManager cacheManager = new EhCacheCacheManager();
+        cacheManager.setCacheManager(ehCacheManager().getObject());
+        return cacheManager;
+    }
+
+    @Bean
+    public EhCacheManagerFactoryBean ehCacheManager() {
+        return new EhCacheManagerFactoryBean();
+    }
+
 }

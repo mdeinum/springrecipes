@@ -1,22 +1,23 @@
 package com.apress.springrecipes.board.service;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.List;
-import java.util.ArrayList;
-
+import com.apress.springrecipes.board.domain.Message;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PostAuthorize;
+import org.springframework.security.access.prepost.PostFilter;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.acls.domain.BasePermission;
+import org.springframework.security.acls.domain.GrantedAuthoritySid;
+import org.springframework.security.acls.domain.ObjectIdentityImpl;
+import org.springframework.security.acls.domain.PrincipalSid;
 import org.springframework.security.acls.model.MutableAcl;
 import org.springframework.security.acls.model.MutableAclService;
-import org.springframework.security.acls.domain.BasePermission;
 import org.springframework.security.acls.model.ObjectIdentity;
-import org.springframework.security.acls.domain.ObjectIdentityImpl;
-import org.springframework.security.acls.domain.GrantedAuthoritySid;
-import org.springframework.security.acls.domain.PrincipalSid;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.transaction.annotation.Transactional;
 
-
-import com.apress.springrecipes.board.domain.Message;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 public class MessageBoardServiceImpl implements MessageBoardService {
 
@@ -27,9 +28,6 @@ public class MessageBoardServiceImpl implements MessageBoardService {
         this.mutableAclService = mutableAclService;
     }
 
-    public List<Message> listMessages() {
-        return new ArrayList<Message>(messages.values());
-    }
 
     @Transactional
     @Secured("ROLE_USER")
@@ -48,8 +46,7 @@ public class MessageBoardServiceImpl implements MessageBoardService {
     }
 
     @Transactional
-    //@Secured({"ROLE_ADMIN", "IP_LOCAL_HOST"})
-    @Secured("ACL_MESSAGE_DELETE")
+    @PreAuthorize("hasPermission(#message, 'delete') or hasPermission(#message, 'admin')")
     public synchronized void deleteMessage(Message message) {
         messages.remove(message.getId());
         ObjectIdentity oid =
@@ -58,6 +55,12 @@ public class MessageBoardServiceImpl implements MessageBoardService {
 
     }
 
+    @PostFilter("hasPermission(filterObject, 'read')")
+    public List<Message> listMessages() {
+        return new ArrayList<Message>(messages.values());
+    }
+
+    @PostAuthorize("hasPermission(returnObject, 'read')")
     public Message findMessageById(Long messageId) {
         return messages.get(messageId);
     }

@@ -5,6 +5,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler;
 
 /**
  * Created by marten on 06-06-14.
@@ -17,12 +18,14 @@ public class MessageBoardSecurityConfiguration extends WebSecurityConfigurerAdap
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .antMatchers("/messageList*").hasAnyRole("USER", "ANONYMOUS")
+                .expressionHandler(new DefaultWebSecurityExpressionHandler())
+                .antMatchers("/messageList*").hasAnyRole("USER", "GUEST")
                 .antMatchers("/messagePost*").hasRole("USER")
-                .antMatchers("/messageDelete*").hasRole("ADMIM")
+                .antMatchers("/messageDelete*").hasRole("ADMIN")
             .and()
                 .formLogin()
                     .loginPage("/login.jsp")
+                    .loginProcessingUrl("/j_spring_security_check")
                     .defaultSuccessUrl("/messageList")
                     .failureUrl("/login.jsp?error=true")
             .and()
@@ -33,14 +36,16 @@ public class MessageBoardSecurityConfiguration extends WebSecurityConfigurerAdap
                     .principal("guest")
                     .authorities("ROLE_GUEST")
             .and()
-                .rememberMe();
+                .rememberMe()
+            ;
 
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("admin").password("secret").authorities("ROLE_ADMIN","ROLE_USER")
-                .and().withUser("user1").password("1111").authorities("ROLE_USER");
+                .withUser("admin").password("secret").authorities("ROLE_ADMIN","ROLE_USER").and()
+                .withUser("user1").password("1111").authorities("ROLE_USER").and()
+                .withUser("user2").password("2222").disabled(true).authorities("ROLE_USER");
     }
 }

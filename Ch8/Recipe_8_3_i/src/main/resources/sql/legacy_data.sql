@@ -1,10 +1,8 @@
-insert into USERS (username, password,enabled) values ('admin','secret', 1);
-insert into USERS (username, password,enabled) values ('user1','1111', 1);
-insert into USERS (username, password,enabled) values ('user2','2222', 0);
+insert into USERS (id,username, password) values (1,'admin','secret');
+insert into USERS (id,username, password) values (2,'user1','1111');
 
-insert into AUTHORITIES (username, authority) values ('admin', 'ROLE_ADMIN');
-insert into AUTHORITIES (username, authority) values ('admin', 'ROLE_USER');
-insert into AUTHORITIES (username, authority) values ('user1', 'ROLE_USER');
-insert into AUTHORITIES (username, authority) values ('user2', 'ROLE_USER');
+insert into AUTHORITIES (member_id,role) values (1, 'ROLE_ADMIN');
+insert into AUTHORITIES (member_id,role) values (1, 'ROLE_USER');
+insert into AUTHORITIES (member_id,role) values (2, 'ROLE_USER');
 
 
