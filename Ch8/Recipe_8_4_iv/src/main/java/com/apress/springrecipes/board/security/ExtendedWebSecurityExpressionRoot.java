@@ -1,0 +1,15 @@
+package com.apress.springrecipes.board.security;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.security.web.FilterInvocation;
+import org.springframework.security.web.access.expression.WebSecurityExpressionRoot;
+
+/**
+ * Created by marten on 13-06-14.
+ */
+public class ExtendedWebSecurityExpressionRoot extends WebSecurityExpressionRoot {
+
+    public ExtendedWebSecurityExpressionRoot(Authentication a, FilterInvocation fi) {
+        super(a, fi);
+    }
+}
