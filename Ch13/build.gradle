@@ -12,8 +12,8 @@ project(':Ch13:Recipe_13_1_i') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -35,8 +35,8 @@ project(':Ch13:Recipe_13_1_ii') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -58,8 +58,8 @@ project(':Ch13:Recipe_13_1_iii') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -80,8 +80,8 @@ project(':Ch13:Recipe_13_2_i') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -102,8 +102,8 @@ project(':Ch13:Recipe_13_2_ii') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -124,8 +124,8 @@ project(':Ch13:Recipe_13_3') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -146,8 +146,8 @@ project(':Ch13:Recipe_13_4') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -168,8 +168,8 @@ project(':Ch13:Recipe_13_6_i') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -190,8 +190,8 @@ project(':Ch13:Recipe_13_6_ii') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -212,8 +212,8 @@ project(':Ch13:Recipe_13_6_iii') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -235,8 +235,8 @@ project(':Ch13:Recipe_13_7_i') {
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-integration', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -257,8 +257,8 @@ project(':Ch13:Recipe_13_8_i') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -279,8 +279,8 @@ project(':Ch13:Recipe_13_8_ii') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -300,8 +300,8 @@ project(':Ch13:Recipe_13_8_iii') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -321,8 +321,8 @@ project(':Ch13:Recipe_13_8_iv') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
@@ -343,8 +343,8 @@ project(':Ch13:Recipe_13_9') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.springframework.batch', name: 'spring-batch-core', version:"$springBatchVersion"
         compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-        compile group: 'org.apache.derby', name: 'derby', version: '10.10.1.1'
-        compile group: 'org.apache.derby', name: 'derbyclient', version: '10.10.1.1'
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
     }
     // Define how to build final JAR for project
     jar {
