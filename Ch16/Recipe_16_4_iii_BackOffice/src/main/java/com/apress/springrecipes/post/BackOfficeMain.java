@@ -8,5 +8,8 @@ public class BackOfficeMain {
     public static void main(String[] args) {
         ApplicationContext context = 
             new GenericXmlApplicationContext("beans-back.xml");
+
+//        ApplicationContext context = new AnnotationConfigApplicationContext("com.apress.springrecipes.post.config");
+
     }
 }

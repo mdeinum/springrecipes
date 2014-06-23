@@ -1,0 +1,221 @@
+description = 'Spring Recipes :: Chapter 5 :: Spring REST'
+
+// Define springweb project
+project(':Ch5:Recipe_5_1_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+
+// Define springweb project
+project(':Ch5:Recipe_5_1_ii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch5:Recipe_5_1_iii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch5:Recipe_5_1_iv') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch5:Recipe_5_1_v') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch5:Recipe_5_2_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch5:Recipe_5_2_ii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch5:Recipe_5_2_iii') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
+
+        // Provided Dependencies
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    war { archiveName='court.war' }
+} // End springweb
+
+// Define springweb project
+project(':Ch5:Recipe_5_3_i') {
+    // Define usage of war plugin
+    // Define defaulttasks, first clean, then build
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
+
+        compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.court.Main")
+    }
+} // End springweb
+
+// Define springweb project
+project(':Ch5:Recipe_5_3_ii') {
+    // Define usage of war plugin
+    // Define defaulttasks, first clean, then build
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
+
+        compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.court.Main")
+    }
+} // End springweb
+
+// Define springweb project
+project(':Ch5:Recipe_5_3_iii') {
+    // Define usage of war plugin
+    // Define defaulttasks, first clean, then build
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
+
+        compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.court.Main")
+    }
+} // End springweb
+
+// Define springweb project
+project(':Ch5:Recipe_5_4_i') {
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean', 'build', 'test', 'war'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-oxm', version: "$springVersion"
+        compile group: 'rome', name: 'rome', version: "$romeVersion"
+
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+} // End springweb

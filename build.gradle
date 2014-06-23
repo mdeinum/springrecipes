@@ -22,12 +22,13 @@ configure(allprojects) { project ->
 	ext.hibValVersion        		= "5.1.1.Final"
 	ext.hsqldbVersion        		= "2.3.2"
     ext.itextVersion                = "4.2.1"
-	ext.jackson2Version      		= "2.3.3"
+	ext.jackson2Version      		= "2.4.0"
 	ext.jodaVersion          		= "2.3"
 	ext.junitVersion         		= "4.11"
     ext.testngVersion               = "6.8.8"
     ext.mockitoVersion              = "1.9.5"
     ext.poiVersion                  = "3.10-FINAL"
+    ext.romeVersion                 = '1.0'
 
 	apply plugin: 'java'
 	apply plugin: 'idea'
