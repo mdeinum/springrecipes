@@ -6,7 +6,7 @@ These are the sources belonging to Spring Recipes 3rd Edition. Each chapter has 
 TOC
 ---
 
- 1. Spring Development Tools
+1. Spring Development Tools
 2. Spring Core Tasks
 3. Spring Annotation Driven Core Tasks
 4. Spring @MVC
