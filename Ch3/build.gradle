@@ -1,100 +1,50 @@
+description='Spring Recipes :: Chapter 9 :: Spring'
+
+subprojects { subproject ->
+    // Define defaultTasks, first clean then build for springintro
+    defaultTasks 'clean', 'build'
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
+    }
+    // Define how to build final JAR for project
+    jar {
+        //The following creates a fat-JAR with all dependencies embedded
+        // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        //Instead use custom task to copy files to lib directory and create a custom manfiest
+        manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
+    }
+}
+
 // Define 3_1_i project
-project(':Ch3:Recipe_3_1_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
-   }
-} // End 3_1_i project 
+project(':Ch3:Recipe_3_1_i') {
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
+    }
+} // End 3_1_i project
 
 // Define 3_1_ii project
 project(':Ch3:Recipe_3_1_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_1_ii project 
 
 // Define 3_1_iii project
 project(':Ch3:Recipe_3_1_iii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_1_iii project 
 
-
-// Define 3_2 project
-project(':Ch3:Recipe_3_2') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_2 project 
-
 // Define 3_3_i project
 project(':Ch3:Recipe_3_3_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_3_i project 
@@ -102,41 +52,16 @@ project(':Ch3:Recipe_3_3_i') {
 
 // Define 3_3_ii project
 project(':Ch3:Recipe_3_3_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
    // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
+    jar {
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_3_ii project 
 
-
 // Define 3_3_iii project
 project(':Ch3:Recipe_3_3_iii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_3_iii project 
@@ -144,20 +69,7 @@ project(':Ch3:Recipe_3_3_iii') {
 
 // Define 3_3_iv project
 project(':Ch3:Recipe_3_3_iv') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_3_iv project 
@@ -165,20 +77,7 @@ project(':Ch3:Recipe_3_3_iv') {
 
 // Define 3_3_v project
 project(':Ch3:Recipe_3_3_v') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_3_v project 
@@ -186,60 +85,23 @@ project(':Ch3:Recipe_3_3_v') {
 
 // Define 3_3_vi project
 project(':Ch3:Recipe_3_3_vi') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_3_vi project 
 
 // Define 3_3_vii project
 project(':Ch3:Recipe_3_3_vii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_3_vii project 
 
 // Define 3_4_i project
 project(':Ch3:Recipe_3_4_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_4_i project 
@@ -247,268 +109,25 @@ project(':Ch3:Recipe_3_4_i') {
 
 // Define 3_4_ii project
 project(':Ch3:Recipe_3_4_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'javax.inject', name: 'javax.inject', version:'1'
-   }
-   // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_4_ii project 
 
-// Define 3_5_i project
-project(':Ch3:Recipe_3_5_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_5_i project 
 
-// Define 3_5_ii project
-project(':Ch3:Recipe_3_5_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_5_ii project 
-
-
-// Define 3_6_i project
-project(':Ch3:Recipe_3_6_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_6_i project 
-
-
-// Define 3_6_ii project
-project(':Ch3:Recipe_3_6_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_6_ii project 
-
-
-// Define 3_7 project
-project(':Ch3:Recipe_3_7') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_7 project 
-
-
-// Define 3_8_i project
-project(':Ch3:Recipe_3_8_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_8_i project 
-
-
-// Define 3_8_ii project
-project(':Ch3:Recipe_3_8_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_8_ii project 
-
-// Define 3_8_iii project
-project(':Ch3:Recipe_3_8_iii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_8_iii project 
 
 // Define 3_8_iv project
 project(':Ch3:Recipe_3_8_iv') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_8_iv project 
 
-// Define 3_9_i project
-project(':Ch3:Recipe_3_9_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-    }
-} // End 3_9_i project 
-
-
-// Define 3_9_ii project
-project(':Ch3:Recipe_3_9_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_9_ii project 
-
-
 // Define 3_9_iii project
 project(':Ch3:Recipe_3_9_iii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_9_iii project 
@@ -516,119 +135,15 @@ project(':Ch3:Recipe_3_9_iii') {
 
 // Define 3_9_iv project
 project(':Ch3:Recipe_3_9_iv') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_9_iv project 
 
-
-// Define 3_10_i project
-project(':Ch3:Recipe_3_10_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_10_i project 
-
-
-// Define 3_10_ii project
-project(':Ch3:Recipe_3_10_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_10_ii project 
-
-
-// Define 3_10_iii project
-project(':Ch3:Recipe_3_10_iii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_10_iii project 
-
-
-// Define 3_11 project
-project(':Ch3:Recipe_3_11') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.shop.Main")
-   }
-} // End 3_11 project 
-
-
 // Define 3_12_i project
 project(':Ch3:Recipe_3_12_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
+  // Define additional dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
     compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
@@ -636,23 +151,14 @@ project(':Ch3:Recipe_3_12_i') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
    }
 } // End 3_12_i project 
 
 // Define 3_12_ii project
-project(':Ch3:Recipe_3_12_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
+project(':Ch3:Recipe_3_12_ii') {
+    // Define additional dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
     compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
@@ -660,23 +166,14 @@ project(':Ch3:Recipe_3_12_ii') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
    }
 } // End 3_12_ii project 
 
 // Define 3_12_iii project
 project(':Ch3:Recipe_3_12_iii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
+  // Define additional dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
     compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
@@ -684,413 +181,266 @@ project(':Ch3:Recipe_3_12_iii') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
    }
 } // End 3_12_iii project 
 
 // Define 3_12_iv project
-project(':Ch3:Recipe_3_12_iv') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-            
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
+project(':Ch3:Recipe_3_12_iv') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
 } // End 3_12_iv project 
 
 
 // Define 3_12_v project
-project(':Ch3:Recipe_3_12_v') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-            
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
+project(':Ch3:Recipe_3_12_v') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
 } // End 3_12_v project 
 
 
 // Define 3_13 project
-project(':Ch3:Recipe_3_13') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-            
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+project(':Ch3:Recipe_3_13') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
     }
 } // End 3_13 project 
 
 
 // Define 3_14_i project
-project(':Ch3:Recipe_3_14_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-            
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
-} // End 3_14_i project 
+project(':Ch3:Recipe_3_14_i') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version: "$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools', version: "$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version: '1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
+}
 
 // Define 3_14_ii project
-project(':Ch3:Recipe_3_14_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-            
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
+project(':Ch3:Recipe_3_14_ii') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
 } // End 3_14_ii project 
 
 
 // Define 3_15_i project
-project(':Ch3:Recipe_3_15_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
-} // End 3_15_i project 
+project(':Ch3:Recipe_3_15_i') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
+} // End 3_15_i project
 
 
 // Define 3_15_ii project
-project(':Ch3:Recipe_3_15_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-  }
+project(':Ch3:Recipe_3_15_ii') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
 } // End 3_15_ii project 
 
 // Define 3_16_i project
-project(':Ch3:Recipe_3_16_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
+project(':Ch3:Recipe_3_16_i') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
 } // End 3_16_i project 
 
 
 // Define 3_16_ii project
-project(':Ch3:Recipe_3_16_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
+project(':Ch3:Recipe_3_16_ii') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
 } // End 3_16_ii project 
 
 
 // Define 3_16_iii project
-project(':Ch3:Recipe_3_16_iii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
-} // End 3_16_iii project 
+project(':Ch3:Recipe_3_16_iii') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
+} // End 3_16_iii project
 
 
 // Define 3_16_iv project
-project(':Ch3:Recipe_3_16_iv') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
-} // End 3_16_iv project 
+project(':Ch3:Recipe_3_16_iv') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
+} // End 3_16_iv project
 
 
 // Define 3_17 project
-project(':Ch3:Recipe_3_17') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
+project(':Ch3:Recipe_3_17') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
 } // End 3_17 project 
 
 // Define 3_18 project
-project(':Ch3:Recipe_3_18') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
+project(':Ch3:Recipe_3_18') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
 } // End 3_18 project 
 
 
 // Define 3_19_i project
-project(':Ch3:Recipe_3_19_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
-   }
+project(':Ch3:Recipe_3_19_i') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
+
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
 } // End 3_19_i project 
 
 
 // Define 3_19_ii project
 project(':Ch3:Recipe_3_19_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
+  // Define additional dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
     compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'org.aspectj', name: 'aspectjweaver',version:"$aspectjVersion"
     compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
 
    }
-   // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
    }
 } // End 3_19_ii project 
 
 
 // Define 3_19_iii project
-project(':Ch3:Recipe_3_19_iii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'org.aspectj', name: 'aspectjweaver',version:"$aspectjVersion"
-    compile group: 'org.springframework', name: 'spring-instrument',version:"$springVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
+project(':Ch3:Recipe_3_19_iii') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-instrument', version:"$springVersion"
+        compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
+        compile group: 'org.aspectj', name: 'aspectjweaver',version:"$aspectjVersion"
+        compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
 
-   }
-   // Define how to build final JAR for project
-   jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
-     manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
+    }
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
     }
 } // End 3_19_iii project 
 
 // Define 3_20 project
 project(':Ch3:Recipe_3_20') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
-  // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
     compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'org.aspectj', name: 'aspectjweaver',version:"$aspectjVersion"
@@ -1099,9 +449,6 @@ project(':Ch3:Recipe_3_20') {
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
     }
 } // End 3_20 project 
@@ -1109,27 +456,17 @@ project(':Ch3:Recipe_3_20') {
 
 // Define 3_21 project
 project(':Ch3:Recipe_3_21') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-aspects', version:"$springVersion"
+    compile group: 'org.springframework', name: 'spring-instrument',version:"$springVersion"
     compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
     compile group: 'org.aspectj', name: 'aspectjweaver',version:"$aspectjVersion"
-    compile group: 'org.springframework', name: 'spring-instrument',version:"$springVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
+    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'
 
    }
-   // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.calculator.Main")
    }
 } // End 3_21 project 
@@ -1137,17 +474,12 @@ project(':Ch3:Recipe_3_21') {
 
 // Define 3_22_i project
 project(':Ch3:Recipe_3_22_i') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
     compile group: 'commons-lang', name: 'commons-lang', version:'2.6'
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.executors.ExecutorsDemo")
    }
 } // End 3_22_i project 
@@ -1155,21 +487,13 @@ project(':Ch3:Recipe_3_22_i') {
 
 // Define 3_22_ii project
 project(':Ch3:Recipe_3_22_ii') {   
-  // Define defaultTasks, first clean then build for springintro
-  defaultTasks 'clean', 'build'
   // Define dependencies
   dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version:"$springVersion"
     compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-beans', version:"$springVersion"
-    compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
     compile group: 'commons-lang', name: 'commons-lang', version:'2.6'
    }
    // Define how to build final JAR for project
    jar {
-     //The following creates a fat-JAR with all dependencies embedded 
-     // from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-     //Instead use custom task to copy files to lib directory and create a custom manfiest
      manifest.attributes("Main-Class": "com.apress.springrecipes.executors.SpringExecutorsDemo")
    }
 } // End 3_22_ii project 
