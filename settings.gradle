@@ -70,6 +70,12 @@ include 'Ch8:Recipe_8_1_i','Ch8:Recipe_8_1_ii','Ch8:Recipe_8_1_iii',\
         'Ch8:Recipe_8_6_i',\
         'Ch8:Recipe_8_7_i','Ch8:Recipe_8_7_ii'
 
+include 'Ch9:Recipe_9_1_i',\
+        'Ch9:Recipe_9_2_i','Ch9:Recipe_9_2_ii',\
+        'Ch9:Recipe_9_3_i','Ch9:Recipe_9_3_ii',\
+        'Ch9:Recipe_9_4_i','Ch9:Recipe_9_4_ii','Ch9:Recipe_9_4_iii',\
+        'Ch9:Recipe_9_5_i'
+
 
 include 'Ch11:Recipe_11_0_i','Ch11:Recipe_11_0_ii','Ch11:Recipe_11_0_iii','Ch11:Recipe_11_0_iv',\
         'Ch11:Recipe_11_1_i','Ch11:Recipe_11_1_ii','Ch11:Recipe_11_1_iii','Ch11:Recipe_11_1_iv','Ch11:Recipe_11_1_v',\
