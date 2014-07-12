@@ -5,5 +5,4 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableBatchProcessing(modular = false)
-public class BatchConfiguration {
-}
+public class BatchConfiguration {}

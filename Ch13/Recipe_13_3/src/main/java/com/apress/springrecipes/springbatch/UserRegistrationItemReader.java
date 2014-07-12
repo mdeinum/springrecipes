@@ -1,7 +1,5 @@
-package com.apress.springrecipes.springbatch.solution2;
+package com.apress.springrecipes.springbatch;
 
-import com.apress.springrecipes.springbatch.UserRegistration;
-import com.apress.springrecipes.springbatch.UserRegistrationService;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ParseException;
 import org.springframework.batch.item.UnexpectedInputException;

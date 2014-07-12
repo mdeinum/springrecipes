@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) throws Throwable {
         ApplicationContext context = new AnnotationConfigApplicationContext(BatchConfiguration.class);
 
-        JobRegistry jobRegistry = context.getBean(JobRegistry.class);
-        JobLauncher jobLauncher = context.getBean(JobLauncher.class);
-        JobRepository jobRepository = context.getBean(JobRepository.class);
+        JobRegistry jobRegistry = context.getBean("jobRegistry", JobRegistry.class);
+        JobLauncher jobLauncher = context.getBean("jobLauncher", JobLauncher.class);
+        JobRepository jobRepository = context.getBean("jobRepository", JobRepository.class);
 
         System.out.println("JobRegistry: " + jobRegistry);
         System.out.println("JobLauncher: " + jobLauncher);

@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
+import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
@@ -42,8 +43,13 @@ public class UserJob {
     @Autowired
     private DataSource dataSource;
 
+    @Autowired
+    private PlatformTransactionManager transactionManager;
+
     @Value("file:${user.home}/batches/registrations.csv")
     private Resource input;
+
+
 
     @Bean
     public Job insertIntoDbFromCsvJob() {
@@ -58,6 +64,7 @@ public class UserJob {
                 .<UserRegistration,UserRegistration>chunk(5)
                 .reader(csvFileReader())
                 .writer(jdbcItemWriter())
+                .transactionManager(transactionManager)
                 .build();
     }
 

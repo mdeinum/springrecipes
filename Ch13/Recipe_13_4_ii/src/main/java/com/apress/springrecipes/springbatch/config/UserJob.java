@@ -1,10 +1,12 @@
 package com.apress.springrecipes.springbatch.config;
 
 import com.apress.springrecipes.springbatch.UserRegistration;
+import com.apress.springrecipes.springbatch.UserRegistrationValidationItemProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
@@ -57,6 +59,7 @@ public class UserJob {
         return steps.get("step1")
                 .<UserRegistration,UserRegistration>chunk(5)
                 .reader(csvFileReader())
+                .processor(userRegistrationValidationItemProcessor())
                 .writer(jdbcItemWriter())
                 .build();
     }
@@ -70,7 +73,7 @@ public class UserJob {
     }
 
     @Bean
-    ItemWriter jdbcItemWriter() {
+    ItemWriter<UserRegistration> jdbcItemWriter() {
         JdbcBatchItemWriter itemWriter = new JdbcBatchItemWriter();
         itemWriter.setDataSource(dataSource);
         itemWriter.setSql(INSERT_REGISTRATION_QUERY);
@@ -91,5 +94,10 @@ public class UserJob {
         lineMapper.setLineTokenizer(tokenizer);
         lineMapper.setFieldSetMapper(fieldSetMapper);
         return lineMapper;
+    }
+
+    @Bean
+    ItemProcessor<UserRegistration, UserRegistration> userRegistrationValidationItemProcessor() {
+        return new UserRegistrationValidationItemProcessor();
     }
 }
