@@ -17,21 +17,21 @@ subprojects { subproject ->
     }
 }
 
-configure(subprojects.findAll { it.name.contains('Front'){
+configure(subprojects.findAll { p -> p.name.contains('Front') } ) {
     // Define how to build final JAR for project
     jar {
         manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
     }
 
-}} )
+}
 
-configure(subprojects.findAll { it.name.contains('Back'){
+configure(subprojects.findAll { p -> p.name.contains('Back') }) {
     // Define how to build final JAR for project
     jar {
         manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
     }
 
-}} )
+}
 
 
 project(':Ch16:Recipe_16_3_FrontDesk') {   

@@ -1,6 +1,6 @@
 description = 'Spring Recipes :: Chapter 17 :: Spring Integration'
 
-subproject{ subproject ->
+subprojects { subproject ->
 
     // Define defaulttasks, first clean, then build, then war
     defaultTasks 'clean', 'build'
