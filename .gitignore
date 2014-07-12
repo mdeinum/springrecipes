@@ -1,8 +1,11 @@
 *~
 .gradle
-/build
+.DS_STORE
+build
+out
 
 #IntelliJ files
 *.iml
 *.ipr
 *.iws
+*.ids
