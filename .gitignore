@@ -9,3 +9,8 @@ out
 *.ipr
 *.iws
 *.ids
+
+#Eclipse files
+.classpath
+.project
+target
