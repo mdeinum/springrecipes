@@ -1,12 +1,12 @@
 package com.apress.springrecipes.springbatch.config;
 
 import com.apress.springrecipes.springbatch.UserRegistration;
+import com.apress.springrecipes.springbatch.UserRegistrationValidationItemProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.core.job.builder.JobBuilder;
-import org.springframework.batch.core.job.flow.JobExecutionDecider;
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
@@ -21,8 +21,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
-import org.springframework.dao.DeadlockLoserDataAccessException;
-import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 
@@ -46,32 +45,27 @@ public class UserJob {
     @Autowired
     private DataSource dataSource;
 
-    @Autowired
-    private PlatformTransactionManager transactionManager;
-
     @Value("file:${user.home}/batches/registrations.csv")
     private Resource input;
 
-
-
     @Bean
     public Job insertIntoDbFromCsvJob() {
-        JobBuilder builder = jobs.get("insertIntoDbFromCsvJob");
-        return builder
-                .start(step1()).next((JobExecutionDecider) null).on("").end("ffjfj").
+        return jobs.get("insertIntoDbFromCsvJob")
+                .start(step1())
                 .build();
     }
 
     @Bean
     protected Step step1() {
-                return steps.get("step1")
+        return steps.get("step1")
                 .<UserRegistration,UserRegistration>chunk(10)
                     .faultTolerant()
-                        skipLimit(3)
-                        retryLimit(3).retry(DeadlockLoserDataAccessException.class)
+                        .noRollback(com.yourdomain.exceptions.YourBusinessException.class)
+                .retryl()
                 .reader(csvFileReader())
-                .writer(jdbcItemWriter()).
-                .transactionManager(transactionManager)
+                .processor(userRegistrationValidationItemProcessor())
+                .writer(jdbcItemWriter())
+                .transactionManager(new DataSourceTransactionManager(dataSource))
                 .build();
     }
 
@@ -84,7 +78,7 @@ public class UserJob {
     }
 
     @Bean
-    ItemWriter jdbcItemWriter() {
+    ItemWriter<UserRegistration> jdbcItemWriter() {
         JdbcBatchItemWriter itemWriter = new JdbcBatchItemWriter();
         itemWriter.setDataSource(dataSource);
         itemWriter.setSql(INSERT_REGISTRATION_QUERY);
@@ -105,5 +99,10 @@ public class UserJob {
         lineMapper.setLineTokenizer(tokenizer);
         lineMapper.setFieldSetMapper(fieldSetMapper);
         return lineMapper;
+    }
+
+    @Bean
+    ItemProcessor<UserRegistration, UserRegistration> userRegistrationValidationItemProcessor() {
+        return new UserRegistrationValidationItemProcessor();
     }
 }

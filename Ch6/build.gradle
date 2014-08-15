@@ -1,0 +1,38 @@
+description='Spring Recipes :: Chapter 6 :: Spring Social'
+
+subprojects { subproject ->
+
+    // Define usage of war plugin
+    apply plugin: 'war'
+    // Define defaulttasks, first clean, then build, then war
+    defaultTasks 'clean','build','war'
+    war {
+        archiveName='social.war'
+    }
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-context-support', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
+        compile group: 'org.springframework.social', name: 'spring-social-core', version:"$springSocialVersion"
+        compile group: 'org.springframework.social', name: 'spring-social-web', version:"$springSocialVersion"
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
+        compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
+
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    }
+}
+
+project(':Ch6:Recipe_6_2_i') {
+
+    dependencies {
+        compile group: 'org.springframework.social', name: 'spring-social-twitter', version: "$springSocialTwitterVersion"
+    }
+}
+
+project(':Ch6:Recipe_6_2_i') {
+
+    dependencies {
+        compile group: 'org.springframework.social', name: 'spring-social-facebook', version: "$springSocialFacebookVersion"
+    }
+}
