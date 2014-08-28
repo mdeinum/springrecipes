@@ -1,6 +1,8 @@
 package com.apress.springrecipes.springbatch.config;
 
 import org.springframework.batch.core.configuration.annotation.BatchConfigurer;
+import org.springframework.batch.core.explore.JobExplorer;
+import org.springframework.batch.core.explore.support.JobExplorerFactoryBean;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.batch.core.launch.support.SimpleJobLauncher;
 import org.springframework.batch.core.repository.JobRepository;
@@ -27,14 +29,14 @@ public class CustomBatchConfigurer implements BatchConfigurer {
     private PlatformTransactionManager transactionManager;
     private JobRepository jobRepository;
     private JobLauncher jobLauncher;
+    private JobExplorer jobExplorer;
+
 
     @Autowired
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         this.transactionManager = new DataSourceTransactionManager(dataSource);
     }
-
-    protected CustomBatchConfigurer() {}
 
     @Override
     public JobRepository getJobRepository() {
@@ -51,6 +53,11 @@ public class CustomBatchConfigurer implements BatchConfigurer {
         return jobLauncher;
     }
 
+    @Override
+    public JobExplorer getJobExplorer() throws Exception {
+        return this.jobExplorer;
+    }
+
     public TaskExecutor taskExecutor() {
         return new SimpleAsyncTaskExecutor();
     }
@@ -59,6 +66,14 @@ public class CustomBatchConfigurer implements BatchConfigurer {
     public void initialize() throws Exception {
         this.jobRepository = createJobRepository();
         this.jobLauncher = createJobLauncher();
+        this.jobExplorer = createJobExplorer();
+    }
+
+    protected JobExplorer createJobExplorer() throws Exception {
+        JobExplorerFactoryBean jobExplorerFactoryBean = new JobExplorerFactoryBean();
+        jobExplorerFactoryBean.setDataSource(this.dataSource);
+        jobExplorerFactoryBean.afterPropertiesSet();
+        return jobExplorerFactoryBean.getObject();
     }
 
     protected JobLauncher createJobLauncher() throws Exception {
