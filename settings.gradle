@@ -148,5 +148,8 @@ include 'Ch18:Recipe_18_1_i','Ch18:Recipe_18_1_ii','Ch18:Recipe_18_1_iii',\
         'Ch18:Recipe_18_7_i','Ch18:Recipe_18_7_ii',\
         'Ch18:Recipe_18_8_i','Ch18:Recipe_18_8_ii'
 
-
-
+include 'Ch19:Recipe_19_1_i','Ch19:Recipe_19_1_ii','Ch19:Recipe_19_1_iii','Ch19:Recipe_19_1_iv',\
+        'Ch19:Recipe_19_2_i','Ch19:Recipe_19_2_ii',\
+        'Ch19:Recipe_19_3_i','Ch19:Recipe_19_3_ii',\
+        'Ch19:Recipe_19_4_i',\
+        'Ch19:Recipe_19_5_i','Ch19:Recipe_19_5_ii','Ch19:Recipe_19_5_iii','Ch19:Recipe_19_5_iv','Ch19:Recipe_19_5_v'

@@ -36,7 +36,7 @@ subprojects { subproject ->
         springIntegrationVersion    = '4.0.3.RELEASE'
         springLdapVersion           = '2.0.2.RELEASE'
         springMobileVersion         = '1.1.2.RELEASE'
-        springSecurityVersion       = '3.2.4.RELEASE'
+        springSecurityVersion       = '3.2.5.RELEASE'
         springSocialVersion         = '1.1.0.RELEASE'
         springSocialFacebookVersion = '1.1.1.RELEASE'
         springSocialTwitterVersion  = '1.1.0.RELEASE'
@@ -130,6 +130,7 @@ subprojects { subproject ->
         // Copy jar dependencies and add to Class-Path.
         dependsOn copyDependenciesToLibDir
         def deps = fileTree(dir: "$buildDir/libs/lib", include: '*.jar');
+        System.out.println("deps: " + deps);
         manifest.attributes("Class-Path": deps.files.collect {'lib/'+it.name}.join(' '))
     }
 }
