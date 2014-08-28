@@ -121,8 +121,8 @@ project(':Ch17:Recipe_17_7_ii') {
 project(':Ch17:Recipe_17_9') {
     dependencies {
         // IRC Client
-        compile group: 'org.pircbotx', name: 'pircbotx', version: '2.0.1'
-
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+        compile group: 'org.springframework.batch', name: 'spring-batch-integration', version: "$springBatchVersion"
     }
 } // End
 
