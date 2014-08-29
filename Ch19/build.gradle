@@ -26,3 +26,19 @@ project(':Ch19:Recipe_19_3_ii') {
         compile group: 'org.aspectj', name: 'aspectjrt', version: "$aspectjVersion"
     }
 } // End
+
+project(':Ch19:Recipe_19_6_i') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'com.gemstone.gemfire', name: 'gemfire', version:"$gemfireVersion"
+        compile group: 'org.springframework.data', name: 'spring-data-gemfire', version: "$springDataGemfireVersion"
+    }
+} // End
+
+project(':Ch19:Recipe_19_6_ii') {
+    // Define additional dependencies
+    dependencies {
+        compile group: 'com.gemstone.gemfire', name: 'gemfire', version:"$gemfireVersion"
+        compile group: 'org.springframework.data', name: 'spring-data-gemfire', version: "$springDataGemfireVersion"
+    }
+} // End

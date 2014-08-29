@@ -14,9 +14,8 @@ allprojects {
     repositories {
         mavenCentral()
         // Public Spring artifacts
-        maven { url "http://repo.spring.io/snapshot" }
-        maven { url "http://repo.spring.io/milestone" }
         maven { url "http://repo.spring.io/release" }
+        maven { url "http://repo.spring.io/libs-release"}
     }
 
 }
@@ -32,7 +31,8 @@ subprojects { subproject ->
         springVersion               = '4.0.6.RELEASE'
         springAmqpVersion           = '1.3.5.RELEASE'
         springBatchVersion          = '3.0.1.RELEASE'
-        springDataJpaVersion        = '1.6.2.RELEASE'
+        springDataGemfireVersion    = '1.4.4.RELEASE'
+        springDataJpaVersion        = '1.6.4.RELEASE'
         springIntegrationVersion    = '4.0.3.RELEASE'
         springLdapVersion           = '2.0.2.RELEASE'
         springMobileVersion         = '1.1.2.RELEASE'
@@ -48,6 +48,7 @@ subprojects { subproject ->
         derbyVersion                = '10.10.2.0'
         dwrVersion                  = '2.0.10'
         ehCacheVersion              = '2.8.3'
+        gemfireVersion              = '8.0.0'
         groovyVersion               = '2.3.3'
         hibernate4Version           = '4.3.5.Final'
         hibValVersion               = '5.1.1.Final'
