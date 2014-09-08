@@ -63,7 +63,9 @@ include 'Ch5:Recipe_5_1_i','Ch5:Recipe_5_1_ii','Ch5:Recipe_5_1_iii','Ch5:Recipe_
         'Ch5:Recipe_5_3_i','Ch5:Recipe_5_3_ii','Ch5:Recipe_5_3_iii',\
         'Ch5:Recipe_5_4_i'
 
-include 'Ch6:Recipe_6_2_i'
+include 'Ch6:Recipe_6_1_i',\
+        'Ch6:Recipe_6_2_i',\
+        'Ch6:Recipe_6_5_i'
 
 include 'Ch8:Recipe_8_1_i','Ch8:Recipe_8_1_ii','Ch8:Recipe_8_1_iii',\
         'Ch8:Recipe_8_2_i','Ch8:Recipe_8_2_ii',\
