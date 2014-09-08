@@ -1,7 +1,7 @@
 description='Spring Recipes :: Chapter 11 :: Spring Data Access'
 
-project(':Ch11:Recipe_11_0_i') {
-    // Define defaultTasks, first clean then build for springintro
+subprojects { subproject ->
+    // Define defaulttasks, first clean, then build, then war
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
@@ -9,416 +9,22 @@ project(':Ch11:Recipe_11_0_i') {
         compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
         compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: "$dbcpVersion"
     }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
 
-project(':Ch11:Recipe_11_0_ii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
     // Define how to build final JAR for project
     jar {
         manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
     }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_0_iii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_0_iv') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_1_i') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_1_ii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_1_iii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_1_iv') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_1_v') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_2_i') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_2_ii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_2_iii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_2_iv') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_2_v') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_2_vi') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_3_i') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_3_ii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_4_i') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_4_ii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_4_iii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_4_iv') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_5_i') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_5_ii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
-
-project(':Ch11:Recipe_11_5_iii') {
-    // Define defaultTasks, first clean then build for springintro
-    defaultTasks 'clean', 'build'
-    // Define dependencies
-    dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-    }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.vehicle.Main")
-    }
-} // End 15_1_i project
+}
 
 project(':Ch11:Recipe_11_6_i') {
     // Define defaultTasks, first clean then build for springintro
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -431,12 +37,8 @@ project(':Ch11:Recipe_11_6_ii') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
     // Define how to build final JAR for project
@@ -450,12 +52,8 @@ project(':Ch11:Recipe_11_6_iii') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
     // Define how to build final JAR for project
@@ -469,12 +67,8 @@ project(':Ch11:Recipe_11_6_iv') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
 
     }
     // Define how to build final JAR for project
@@ -488,13 +82,8 @@ project(':Ch11:Recipe_11_7_i') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -507,13 +96,8 @@ project(':Ch11:Recipe_11_7_ii') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -526,13 +110,8 @@ project(':Ch11:Recipe_11_7_iii') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -545,13 +124,8 @@ project(':Ch11:Recipe_11_7_iv') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -564,13 +138,8 @@ project(':Ch11:Recipe_11_7_v') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -583,13 +152,8 @@ project(':Ch11:Recipe_11_7_vi') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -602,13 +166,8 @@ project(':Ch11:Recipe_11_8_i') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -621,13 +180,8 @@ project(':Ch11:Recipe_11_8_ii') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -640,13 +194,8 @@ project(':Ch11:Recipe_11_9_i') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -659,13 +208,8 @@ project(':Ch11:Recipe_11_9_ii') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -678,13 +222,8 @@ project(':Ch11:Recipe_11_9_iii') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -697,13 +236,8 @@ project(':Ch11:Recipe_11_10_i') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -716,13 +250,8 @@ project(':Ch11:Recipe_11_10_ii') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
@@ -735,14 +264,9 @@ project(':Ch11:Recipe_11_11') {
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-orm', version:"$springVersion"
         compile group: 'org.springframework.data', name: 'spring-data-jpa', version:"$springDataJpaVersion"
         compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:"$hibernate4Version"
-        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
-        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
-        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.0'
-
     }
     // Define how to build final JAR for project
     jar {
