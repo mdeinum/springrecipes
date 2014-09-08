@@ -15,7 +15,7 @@ subprojects { subproject ->
         compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
 
         // Provided Dependencies
-        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: "$servletApiVersion"
     }
 }
 
@@ -50,7 +50,7 @@ project(':Ch5:Recipe_5_3_ii') {
     // Define aditional dependencies
     dependencies {
         compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
-        compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+        compile group: 'javax.servlet', name: 'javax.servlet-api', version: "$servletApiVersion"
     }
 
     jar {
@@ -65,7 +65,7 @@ project(':Ch5:Recipe_5_3_iii') {
     // Define dependencies
     dependencies {
         compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
-        compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+        compile group: 'javax.servlet', name: 'javax.servlet-api', version: "$servletApiVersion"
     }
 
     jar {

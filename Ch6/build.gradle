@@ -15,6 +15,7 @@ subprojects { subproject ->
         compile group: 'org.springframework', name: 'spring-context-support', version:"$springVersion"
         compile group: 'org.springframework', name: 'spring-webmvc', version:"$springVersion"
         compile group: 'org.springframework.social', name: 'spring-social-core', version:"$springSocialVersion"
+        compile group: 'org.springframework.social', name: 'spring-social-config', version:"$springSocialVersion"
         compile group: 'org.springframework.social', name: 'spring-social-web', version:"$springSocialVersion"
         compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
         compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
@@ -23,7 +24,7 @@ subprojects { subproject ->
     }
 }
 
-project(':Ch6:Recipe_6_2_i') {
+project(':Ch6:Recipe_6_1_i') {
 
     dependencies {
         compile group: 'org.springframework.social', name: 'spring-social-twitter', version: "$springSocialTwitterVersion"
@@ -33,6 +34,22 @@ project(':Ch6:Recipe_6_2_i') {
 project(':Ch6:Recipe_6_2_i') {
 
     dependencies {
+        compile group: 'org.springframework.social', name: 'spring-social-twitter', version: "$springSocialTwitterVersion"
         compile group: 'org.springframework.social', name: 'spring-social-facebook', version: "$springSocialFacebookVersion"
     }
+}
+
+project(':Ch6:Recipe_6_5_i') {
+    dependencies {
+        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
+
+        compile group: 'org.springframework.social', name: 'spring-social-twitter', version: "$springSocialTwitterVersion"
+        compile group: 'org.springframework.social', name: 'spring-social-facebook', version: "$springSocialFacebookVersion"
+
+        compile group: 'org.apache.commons', name: 'commons-dbcp2', version: "$dbcpVersion"
+        compile group: 'org.apache.derby', name: 'derby', version: "$derbyVersion"
+        compile group: 'org.apache.derby', name: 'derbyclient', version: "$derbyVersion"
+
+    }
+
 }

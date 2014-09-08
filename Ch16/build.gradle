@@ -67,7 +67,7 @@ project(':Ch16:Recipe_16_5_BackOffice') {
 project(':Ch16:Recipe_16_6_FrontDesk') {
     dependencies {
         compile group: 'org.springframework.amqp', name: 'spring-rabbit', version: "$springAmqpVersion"
-        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.0'
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
     }
     // Define how to build final JAR for project
     jar {
@@ -80,7 +80,7 @@ project(':Ch16:Recipe_16_6_FrontDesk') {
 project(':Ch16:Recipe_16_6_BackOffice') {
     dependencies {
         compile group: 'org.springframework.amqp', name: 'spring-rabbit', version: "$springAmqpVersion"
-        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.0'
+        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
 
     }
 } // End 16_5_BackOffice project
