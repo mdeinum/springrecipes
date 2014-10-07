@@ -64,8 +64,15 @@ include 'Ch5:Recipe_5_1_i','Ch5:Recipe_5_1_ii','Ch5:Recipe_5_1_iii','Ch5:Recipe_
         'Ch5:Recipe_5_4_i'
 
 include 'Ch6:Recipe_6_1_i',\
-        'Ch6:Recipe_6_2_i',\
-        'Ch6:Recipe_6_5_i'
+        'Ch6:Recipe_6_2_i','Ch6:Recipe_6_2_ii',\
+        'Ch6:Recipe_6_3_i',\
+        'Ch6:Recipe_6_4_i','Ch6:Recipe_6_4_ii',\
+        'Ch6:Recipe_6_5_i',\
+        'Ch6:Recipe_6_6_i',\
+        'Ch6:Recipe_6_7_i','Ch6:Recipe_6_7_ii'
+
+include 'Ch7:Recipe_7_2_i',\
+        'Ch7:Recipe_7_3_i','Ch7:Recipe_7_3_ii','Ch7:Recipe_7_3_iii'
 
 include 'Ch8:Recipe_8_1_i','Ch8:Recipe_8_1_ii','Ch8:Recipe_8_1_iii',\
         'Ch8:Recipe_8_2_i','Ch8:Recipe_8_2_ii',\
@@ -119,6 +126,12 @@ include 'Ch13:Recipe_13_1_i','Ch13:Recipe_13_1_ii','Ch13:Recipe_13_1_iii','Ch13:
         'Ch13:Recipe_13_7_i',\
         'Ch13:Recipe_13_8_i','Ch13:Recipe_13_8_ii','Ch13:Recipe_13_8_iii','Ch13:Recipe_13_8_iv',\
         'Ch13:Recipe_13_9'
+
+include 'Ch14:Recipe_14_1_i','Ch14:Recipe_14_1_ii','Ch14:Recipe_14_1_iii','Ch14:Recipe_14_1_iv','Ch14:Recipe_14_1_v',\
+        'Ch14:Recipe_14_2_i','Ch14:Recipe_14_2_ii','Ch14:Recipe_14_2_iii','Ch14:Recipe_14_2_iv','Ch14:Recipe_14_2_v','Ch14:Recipe_14_2_vi',\
+        'Ch14:Recipe_14_3_i',\
+        'Ch14:Recipe_14_4_i','Ch14:Recipe_14_4_ii'
+
 
 include 'Ch15:Recipe_15_1_i','Ch15:Recipe_15_1_ii','Ch15:Recipe_15_1_iii','Ch15:Recipe_15_1_iv','Ch15:Recipe_15_1_v','Ch15:Recipe_15_1_vi','Ch15:Recipe_15_1_vii','Ch15:Recipe_15_1_viii',\
         'Ch15:Recipe_15_2_i','Ch15:Recipe_15_2_ii','Ch15:Recipe_15_2_iii',\

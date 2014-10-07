@@ -21,7 +21,8 @@ public class DeviceResolverRequestFilter extends OncePerRequestFilter {
     public static final String DEVICE_NORMAL = "NORMAL";
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
+                                    FilterChain filterChain) throws ServletException, IOException {
         String userAgent = request.getHeader("User-Agent");
         String device = DEVICE_NORMAL;
 

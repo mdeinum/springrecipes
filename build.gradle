@@ -31,8 +31,12 @@ subprojects { subproject ->
         springVersion               = '4.0.7.RELEASE'
         springAmqpVersion           = '1.3.6.RELEASE'
         springBatchVersion          = '3.0.1.RELEASE'
-        springDataGemfireVersion    = '1.4.4.RELEASE'
+        springCFVersion             = '1.1.0.RELEASE'
+        springDataGemfireVersion    = '1.5.0.RELEASE'
         springDataJpaVersion        = '1.7.0.RELEASE'
+        springDataMongodbVersion    = '1.6.0.RELEASE'
+        springDataNeo4jVersion      = '3.2.0.RELEASE'
+        springDataRedisVersion      = '1.4.0.RELEASE'
         springIntegrationVersion    = '4.0.4.RELEASE'
         springLdapVersion           = '2.0.2.RELEASE'
         springMobileVersion         = '1.1.2.RELEASE'
@@ -58,13 +62,15 @@ subprojects { subproject ->
         hibValVersion               = '5.1.1.Final'
         hsqldbVersion               = '2.3.2'
         itextVersion                = '4.2.1'
-        jackson2Version             = '2.4.1.1'
+        jackson2Version             = '2.4.2'
         javaMailVersion             = '1.4.7'
+        jedisVersion                = '2.6.0'
         jodaVersion                 = '2.3'
         jsfVersion                  = '2.2.7'
         junitVersion                = '4.11'
         logbackVersion              = '1.1.2'
         mockitoVersion              = '1.9.5'
+        neo4jVersion                = '2.1.5'
         poiVersion                  = '3.10.1'
         quartzVersion               = '2.2.1'
         romeVersion                 = '1.0'
@@ -119,7 +125,7 @@ subprojects { subproject ->
 		compile("ch.qos.logback:logback-classic:${logbackVersion}")
         compile('org.apache.commons:commons-lang3:3.3')
 		//
-		provided group:'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+		provided group:'javax.servlet', name: 'javax.servlet-api', version: "$servletApiVersion"
 		// Add dependencies for testing (these will only be used for the testing phase)
 		testCompile("junit:junit:${junitVersion}")
 		testCompile("org.hamcrest:hamcrest-all:1.3")

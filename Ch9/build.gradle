@@ -19,7 +19,7 @@ subprojects { subproject ->
         compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: '1.2.1'
         compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: '1.2.1'
 
-        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: "$servletApiersion"
+        providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: "$servletApiVersion"
     }
 
 

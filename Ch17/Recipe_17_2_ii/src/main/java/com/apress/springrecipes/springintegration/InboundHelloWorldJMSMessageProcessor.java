@@ -13,7 +13,8 @@ public class InboundHelloWorldJMSMessageProcessor {
     private final Logger logger = LoggerFactory.getLogger(InboundHelloWorldJMSMessageProcessor.class);
 
     @ServiceActivator
-    public void handleIncomingJmsMessageWithPayloadNotExtracted(Message<javax.jms.Message> msgWithJmsMessageAsPayload) throws Throwable {
+    public void handleIncomingJmsMessageWithPayloadNotExtracted(
+            Message<javax.jms.Message> msgWithJmsMessageAsPayload) throws Throwable {
         javax.jms.MapMessage jmsMessage = (MapMessage) msgWithJmsMessageAsPayload.getPayload();
         logger.debug("firstName: {}, lastName: {}, id: {}", jmsMessage.getString("firstName"),
                                                             jmsMessage.getString("lastName"),

@@ -12,6 +12,7 @@ public class InboundCustomerServiceActivator {
     @ServiceActivator
     public void doSomethingWithCustomer(Message<Customer> customerMessage) {
         Customer customer = customerMessage.getPayload();
-        logger.debug("id={}, firstName: {}, lastName: {}", customer.getId(), customer.getFirstName(), customer.getLastName());
+        logger.debug("id={}, firstName: {}, lastName: {}",
+                     customer.getId(), customer.getFirstName(), customer.getLastName());
     }
 }
