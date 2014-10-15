@@ -10,7 +10,7 @@
     </appender>
 
     <logger name="com.apress" level="DEBUG" />
-    <logger name="org.springframework.data.neo4j" level="DEBUG" />
+    <logger name="org.springframework.data" level="debug" />
 
     <root level="INFO">
         <appender-ref ref="CONSOLE" />

@@ -97,6 +97,30 @@ project(':Ch14:Recipe_14_2_vi') {
     }
 }
 
+project(':Ch14:Recipe_14_3_i') {
+    // Define dependencies
+    dependencies {
+        compile group: 'org.apache.hadoop', name: 'hadoop-client', version: "$hadoopVersion"
+    }
+
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.hadoop.WordCount")
+    }
+}
+
+project(':Ch14:Recipe_14_3_ii') {
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework.data', name: 'spring-data-hadoop', version: "$springHadoopVersion"
+        compile group: 'org.apache.hadoop', name: 'hadoop-client', version: "$hadoopVersion"
+    }
+    // Define how to build final JAR for project
+    jar {
+        manifest.attributes("Main-Class": "com.apress.springrecipes.hadoop.WordCountSpring")
+    }
+}
+
 project(':Ch14:Recipe_14_4_i') {
     // Define dependencies
     dependencies {
@@ -108,5 +132,46 @@ project(':Ch14:Recipe_14_4_ii') {
     // Define dependencies
     dependencies {
         compile group: 'org.neo4j', name: 'neo4j', version: "$neo4jVersion"
+    }
+}
+
+project(':Ch14:Recipe_14_4_iii') {
+    // Define dependencies
+    dependencies {
+        compile group: 'org.neo4j', name: 'neo4j', version: "$neo4jVersion"
+    }
+}
+
+project(':Ch14:Recipe_14_4_iv') {
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework.data', name: 'spring-data-neo4j', version: "$springDataNeo4jVersion"
+        compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
+        compile group: 'org.springframework.data', name: 'spring-data-neo4j-tx', version: "$springDataNeo4jVersion"
+        compile group: 'org.neo4j', name: 'neo4j', version: "$neo4jVersion"
+    }
+}
+
+project(':Ch14:Recipe_14_4_v') {
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework.data', name: 'spring-data-neo4j', version: "$springDataNeo4jVersion"
+        compile group: 'org.springframework.data', name: 'spring-data-neo4j-tx', version: "$springDataNeo4jVersion"
+        compile group: 'org.neo4j', name: 'neo4j', version: "$neo4jVersion"
+        compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
+    }
+}
+
+project(':Ch14:Recipe_14_4_vi') {
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework.data', name: 'spring-data-neo4j', version: "$springDataNeo4jVersion"
+        compile group: 'org.springframework.data', name: 'spring-data-neo4j-tx', version: "$springDataNeo4jVersion"
+        compile group: 'org.springframework.data', name: 'spring-data-neo4j-rest', version: "$springDataNeo4jVersion"
+        compile group: 'org.neo4j', name: 'neo4j', version: "$neo4jVersion"
+        compile group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
+        compile group: 'com.sun.jersey', name: 'jersey-core', version: '1.9'
+        compile group: 'com.sun.jersey', name: 'jersey-client', version: '1.9'
+        compile group: 'javax.ws.rs', name: 'jsr311-api', version: '1.1.1'
     }
 }
