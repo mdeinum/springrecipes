@@ -45,7 +45,7 @@ subprojects { subproject ->
         springSocialVersion         = '1.1.0.RELEASE'
         springSocialFacebookVersion = '1.1.1.RELEASE'
         springSocialTwitterVersion  = '1.1.0.RELEASE'
-        springWebFlowVersion        = '2.4.0.RELEASE'
+        springWebFlowVersion        = '2.4.1.RELEASE'
         springWsVersion             = '2.2.0.RELEASE'
         activemqVersion             = '5.10.0'
         aspectjVersion              = '1.8.2'
