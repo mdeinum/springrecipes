@@ -121,7 +121,7 @@ include 'Ch12:Recipe_12_1_i','Ch12:Recipe_12_1_ii','Ch12:Recipe_12_1_iii','Ch12:
         'Ch12:Recipe_12_4_i','Ch12:Recipe_12_4_ii',\
         'Ch12:Recipe_12_5_i','Ch12:Recipe_12_5_ii',\
         'Ch12:Recipe_12_6_i','Ch12:Recipe_12_6_ii','Ch12:Recipe_12_6_iii',\
-        'Ch12:Recipe_12_7_i',\
+        'Ch12:Recipe_12_7_i', 'Ch12:Recipe_12_7_ii',\
         'Ch12:Recipe_12_8_i','Ch12:Recipe_12_8_ii','Ch12:Recipe_12_8_iii','Ch12:Recipe_12_8_iv',\
         'Ch12:Recipe_12_9'
 
