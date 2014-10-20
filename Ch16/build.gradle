@@ -1,86 +1,134 @@
-description='Spring Recipes :: Chapter 16 :: Spring Messaging'
+description = 'Spring Recipes :: Chapter 16 :: Spring Integration'
 
 subprojects { subproject ->
 
-    // Define defaultTasks, first clean then build for springintro
+    // Define defaulttasks, first clean, then build, then war
     defaultTasks 'clean', 'build'
     // Define dependencies
     dependencies {
-        compile group: 'org.springframework', name: 'spring-expression', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-context', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-jms', version:"$springVersion"
-        compile group: 'org.springframework', name: 'spring-tx', version:"$springVersion"
+        compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
+        compile group: 'org.springframework', name: 'spring-messaging', version: "$springVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-core', version: "$springIntegrationVersion"
 
-        compile group: 'javax.jms', name: 'jms-api', version:'1.1-rev-1'
-        compile group: 'org.apache.activemq', name: 'activemq-client',version:"$activemqVersion"
-        compile group: 'org.apache.activemq', name: 'activemq-broker',version:"$activemqVersion"
+        // No activemq-all as that includes dependencies we don't want
+        compile group: 'org.apache.activemq', name: 'activemq-broker', version: "$activemqVersion"
+        compile group: 'org.apache.activemq', name: 'activemq-client', version: "$activemqVersion"
     }
 }
 
-configure(subprojects.findAll { p -> p.name.contains('Front') } ) {
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-    }
-
-}
-
-configure(subprojects.findAll { p -> p.name.contains('Back') }) {
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.post.BackOfficeMain")
-    }
-
-}
-
-
-project(':Ch16:Recipe_16_3_FrontDesk') {   
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-} // End 16_3_FrontDesk project
-
-
-// Define 16_3_BackOffice project
-project(':Ch16:Recipe_16_3_BackOffice') {   
-  dependencies {
-    compile group: 'org.springframework', name: 'spring-aop', version:"$springVersion"
-    compile group: 'org.aspectj', name: 'aspectjtools',version:"$aspectjVersion"
-    compile group: 'aopalliance', name: 'aopalliance', version:'1.0'           
-   }
-} // End 16_3_BackOffice project
-
-
-
-
-
-// Define 16_5_BackOffice project
-project(':Ch16:Recipe_16_5_BackOffice') {   
-  dependencies {
-    compile group: 'org.apache.activemq', name: 'activemq-pool',version:"$activemqVersion"
-   }
-} // End 16_5_BackOffice project
-
-// Define 16_6_FrontDesk project
-project(':Ch16:Recipe_16_6_FrontDesk') {
+// Define project
+project(':Ch16:Recipe_16_2_i') {
+    // Define additional dependencies
     dependencies {
-        compile group: 'org.springframework.amqp', name: 'spring-rabbit', version: "$springAmqpVersion"
-        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
     }
-    // Define how to build final JAR for project
-    jar {
-        manifest.attributes("Main-Class": "com.apress.springrecipes.post.FrontDeskMain")
-    }
-} // End 16_5_FrontDesk project
+} // End
 
-
-// Define 16_5_BackOffice project
-project(':Ch16:Recipe_16_6_BackOffice') {
+// Define project
+project(':Ch16:Recipe_16_2_ii') {
+    // Define additional dependencies
     dependencies {
-        compile group: 'org.springframework.amqp', name: 'spring-rabbit', version: "$springAmqpVersion"
-        compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jackson2Version"
-
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
     }
-} // End 16_5_BackOffice project
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_3_ii') {
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_3_iii') {
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_4_i') {
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_5_i') {
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+    }
+} // End
+
+
+// Define project
+project(':Ch16:Recipe_16_5_ii') {
+    // Define dependencies
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_6_i') {
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_6_ii') {
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_6_iii') {
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_7_i') {
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+        compile group: 'commons-io', name: 'commons-io', version: "2.4"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_7_i') {
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+        compile group: 'commons-io', name: 'commons-io', version: "2.4"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_7_ii') {
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+        compile group: 'commons-io', name: 'commons-io', version: "2.4"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_9') {
+    dependencies {
+        // IRC Client
+        compile group: 'org.springframework.integration', name: 'spring-integration-file', version: "$springIntegrationVersion"
+        compile group: 'org.springframework.batch', name: 'spring-batch-integration', version: "$springBatchVersion"
+    }
+} // End
+
+// Define project
+project(':Ch16:Recipe_16_10_ii') {
+    dependencies {
+        compile group: 'org.springframework.integration', name: 'spring-integration-jms', version: "$springIntegrationVersion"
+    }
+} // End
