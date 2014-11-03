@@ -39,6 +39,7 @@ project(':Ch7:Recipe_7_3_ii') {
     dependencies {
         compile group: 'org.springframework.security', name: 'spring-security-ldap', version:"$springSecurityVersion"
         compile group: 'org.springframework.ldap', name: 'spring-ldap-core', version: "$springLdapVersion"
+        compile group: 'org.springframework', name: 'spring-jdbc', version:"$springVersion"
         compile group: 'net.sf.ehcache', name:'ehcache', version: "$ehCacheVersion"
     }
 }

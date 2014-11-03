@@ -108,8 +108,13 @@ project(':Ch3:Recipe_3_4_i') {
 
 
 // Define 3_4_ii project
-project(':Ch3:Recipe_3_4_ii') {   
-   jar {
+project(':Ch3:Recipe_3_4_ii') {
+
+    dependencies {
+        compile group: 'javax.inject', name: 'javax.inject', version: '1'
+    }
+
+        jar {
      manifest.attributes("Main-Class": "com.apress.springrecipes.sequence.Main")
    }
 } // End 3_4_ii project 
