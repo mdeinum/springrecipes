@@ -1,5 +1,6 @@
 package com.apress.springrecipes.bookshop;
 
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
