@@ -33,7 +33,7 @@ public class RetryableUserRegistrationServiceItemWriter implements ItemWriter<Us
     public void write(List<?extends UserRegistration> items)
         throws Exception {
         for (final UserRegistration userRegistration : items) {
-            UserRegistration registeredUserRegistration = retryTemplate.execute(new RetryCallback<UserRegistration>() {
+            UserRegistration registeredUserRegistration = retryTemplate.execute(new RetryCallback<UserRegistration, Exception>() {
                         public UserRegistration doWithRetry(RetryContext context)
                             throws Exception {
                             return userRegistrationService.registerUser(userRegistration);

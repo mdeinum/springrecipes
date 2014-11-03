@@ -58,7 +58,7 @@ public class UserJob {
     public Job insertIntoDbFromCsvJob() {
         JobBuilder builder = jobs.get("insertIntoDbFromCsvJob");
         return builder
-                .start(step1()).next((JobExecutionDecider) null).on("").end("ffjfj").
+                .start(step1()).next((JobExecutionDecider) null).on("").end("ffjfj").build()
                 .build();
     }
 
@@ -67,12 +67,11 @@ public class UserJob {
                 return steps.get("step1")
                 .<UserRegistration,UserRegistration>chunk(10)
                     .faultTolerant()
-                        skipLimit(3)
-                        retryLimit(3).retry(DeadlockLoserDataAccessException.class)
+                        .skipLimit(3)
+                        .retryLimit(3).retry(DeadlockLoserDataAccessException.class)
                 .reader(csvFileReader())
-                .writer(jdbcItemWriter()).
-                .transactionManager(transactionManager)
-                .build();
+                .writer(jdbcItemWriter())
+                .transactionManager(transactionManager).build();
     }
 
     @Bean
@@ -84,11 +83,11 @@ public class UserJob {
     }
 
     @Bean
-    ItemWriter jdbcItemWriter() {
-        JdbcBatchItemWriter itemWriter = new JdbcBatchItemWriter();
+    ItemWriter<UserRegistration> jdbcItemWriter() {
+        JdbcBatchItemWriter<UserRegistration> itemWriter = new JdbcBatchItemWriter<>();
         itemWriter.setDataSource(dataSource);
         itemWriter.setSql(INSERT_REGISTRATION_QUERY);
-        itemWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider());
+        itemWriter.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<UserRegistration>());
         return itemWriter;
     }
 
@@ -98,7 +97,7 @@ public class UserJob {
         tokenizer.setDelimiter(",");
         tokenizer.setNames(new String[]{"firstName","lastName","company","address","city","state","zip","county","url","phoneNumber","fax"});
 
-        BeanWrapperFieldSetMapper<UserRegistration> fieldSetMapper = new BeanWrapperFieldSetMapper();
+        BeanWrapperFieldSetMapper<UserRegistration> fieldSetMapper = new BeanWrapperFieldSetMapper<>();
         fieldSetMapper.setTargetType(UserRegistration.class);
 
         DefaultLineMapper<UserRegistration> lineMapper = new DefaultLineMapper<>();
