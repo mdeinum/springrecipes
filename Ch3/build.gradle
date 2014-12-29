@@ -1,4 +1,4 @@
-description='Spring Recipes :: Chapter 9 :: Spring'
+description='Spring Recipes :: Chapter 3 :: Spring'
 
 subprojects { subproject ->
     // Define defaultTasks, first clean then build for springintro

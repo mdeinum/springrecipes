@@ -1,3 +1,5 @@
+description='Spring Recipes :: Chapter 2 :: Spring'
+
 // Define 2_1 project
 project(':Ch2:Recipe_2_1') {   
   // Define defaultTasks, first clean then build for springintro
