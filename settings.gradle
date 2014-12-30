@@ -73,7 +73,7 @@ include 'Ch6:Recipe_6_1_i',\
 
 
 include 'Ch7:Recipe_7_1_i','Ch7:Recipe_7_1_ii','Ch7:Recipe_7_1_iii',\
-        'Ch7:Recipe_7_2_i','Ch7:Recipe_7_2_ii',\
+        'Ch7:Recipe_7_2_i',\
         'Ch7:Recipe_7_3_i','Ch7:Recipe_7_3_ii',\
         'Ch7:Recipe_7_4_i','Ch7:Recipe_7_4_ii','Ch7:Recipe_7_4_iii','Ch7:Recipe_7_4_iv','Ch7:Recipe_7_4_v',\
         'Ch7:Recipe_7_6_i',\
